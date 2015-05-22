@@ -1,32 +1,92 @@
 /*This file is the main stylesheet meant to be a link to 
 the index.html of the webpage srijith1996.github.io*/
 
+
+/*style the background with a superb image and keep it fixed*/
 body{
-	background-color: #F5DBAB;
+	background-image: url("images/Christmas-Background.jpeg");
+	background-attachment: fixed;
 }
 
+/*h4 tag gets the perfect styling to stand out*/
 h4{
-	color: #0B1429;
+	color: #593216;
 	font-family: Courier, sans-serif;
 	text-align: left;
 	font-size: 1.7em;
 	font-weight: bolder;
+	padding-top: 100px;
 }
 
+/*the head element is going to stay fixed with the same background. I plan to add more components to it in the long run*/
+#head{
+	position: fixed;
+	background-image: url("images/Christmas-Background.jpeg");
+	display: block;
+	width: 100%;
+	height: 100px;
+	top: 0px;
+	box-shadow: 0px 10px 20px -16px black;
+	right: 0px;
+	left: 0px;
+}
+
+/*Personal class consists of the line tags concerning the author's age, and other personal details*/
+.personal{
+	font-family: cursive;
+	color: #7A4F05;
+}
+
+/*This contains a paragraph and other personal interests of the author*/
+.others{
+	font-family: cursive;
+	color: #735C03;
+}
+
+/*This is the head which is the 'hello world!' for now*/
 #main_title{
-	color: #2E331E;
+	color: #1E1000;
 	font-family: Verdana, serif;
 	font-size: 3em;
-	text-align: center;
+	text-align: left;
+	text-shadow: 0px 0px 10px #574119;
 }
 
+/*this is the 'about me section' that you see on the page*/
 #info_section{
 	display: inline-block;
-	background-color: #F2DFBB;
+	background-color: #FCDE65;	
 	width: 700px;
 	box-shadow: 0px 0px 20px #574119;
 }
 
+/* The paragraphs first letter has to look GOOD ;)*/
+#first_letter{
+	color: #4D3304;
+	font-family: Courier, Verdana, Arial, serif;
+	font-size: 2em;
+}
+
+/*All the hyperlinks will have specific styling*/
+a{
+	text-decoration: none;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	font-style: italic;
+	color: #1F2905;
+}
+a:hover{
+	color: #61452E;
+}
+
+/*contains the profile picture*/
+aside{
+	display: inline-block;
+	margin-right: 0 auto;
+	width: 512px;
+}
+
+/*This the only image in the aside tag*/
 #profile_image{
 	border: 4px solid #DBA746;
 	border-top-right-radius: 20px;
@@ -36,6 +96,7 @@ h4{
 	box-shadow: 0px 0px 30px #574119;
 }
 
+/*The caption of the profile image is styled specific to look as a part of the picture*/
 #profile_caption{
 	font-family: Arial, sans-serif;
 	font-size: 1em;
@@ -48,18 +109,130 @@ h4{
 	color: #2E331E;
 }
 
+/*common styling for the unordered list*/
 ul{
 	color: #041533;
 	width: 620px;
 }
 
-aside{
-	display: inline-block;
-	width: 512px;
+
+
+/*henceforth all the elements styled will be a part of the calculator*/
+
+/*calculator section tag is styled here*/
+#calculator{
+	margin: 0 auto;
+	width: 320px;
+	height: 400px;
+	background-color: #FCDE65;
+	border: 4px solid #DBA746;
+	border-radius: 20px;
+	box-shadow: 0px 0px 30px #574119;
+	padding: 5px;
 }
 
-#first_letter{
-	color: #4D3304;
-	font-family: Courier, Verdana, Arial, serif;
+/* the text area is a separate subsection of the calculator, the text of the calculator will be entered here */
+#text_area{
+	margin: 0 auto;
+	width: 290px;
+	height: 100px;
+	background-color: #EDF7F3;
+	border: 1px solid black;
+	border-radius: 10px;
+	box-shadow: inset 0px 0px 10px #6E400F;
+	cursor: text;
+	text-align: right;
+	font-family: Courier, sans-serif;
 	font-size: 2em;
+}
+
+/* this is a table where all the keys are arranged*/
+#keypad{
+	margin: 0 auto;
+}
+
+/* all keys, or rather table cells which consist of numbers*/
+.numbers{
+	background-color: #EDF7F3;
+	width: 70px;
+	height: 50px;
+	border-radius: 10px;
+	color: #7A7E85;
+	text-shadow: 0px 0px 15px #414347;
+	text-align: center;
+	box-shadow: 0px 0px 10px #6E400F;
+	cursor: pointer;
+}
+/*hover and onclick effects for number keypad buttons*/
+.numbers:hover{
+	background-color: #E36927;
+	color: white;
+	font-weight: bold;
+}
+.numbers:active{
+	box-shadow: none;
+}
+
+/*operator buttons (+, -, *, / and =) are a part of this class*/
+.operators{
+	background-color: #F0E3CE;
+	width: 70px;
+	height: 50px;
+	border-radius: 10px;
+	color: #70511C;
+	text-shadow: 0px 0px 15px #614515;
+	text-align: center;
+	box-shadow: 0px 0px 20px #6E400F;
+	cursor: pointer;
+}
+/*hover and onclick effects for operator keypad buttons*/
+.operators:hover{
+	background-color: #E0663D;
+}
+.operators:active{
+	box-shadow: none;
+}
+
+/*The equal sign deserves to stand out ;)*/
+#equal{
+	background-color: #E6630B;
+	font-weight: bold;
+	color: white;
+}
+#equal:hover{
+	background-color: #ED4300;
+	font-weight: bolder;
+}
+#equal:active{
+	box-shadow: none;
+}
+
+/*utility buttons like clear and backspace come under this category*/
+.utility{
+	background-color: #C9C0AF; 
+	width: 70px;
+	height: 50px;
+	border-radius: 10px;
+	color: #E32712;
+	text-shadow: 0px 0px 20px #A11202;
+	text-align: center;
+	font-weight: bold;
+	box-shadow: 0px 0px 20px #6E400F;
+	cursor: pointer;
+}
+/*hover and onclick effects for utility keypad buttons*/
+.utility:hover{
+	background-color: #4B595E;
+	font-weight: bolder;
+}
+.utility:active{
+	box-shadow: none;
+}
+
+
+
+/*last but not the least, comes the footer*/
+footer{
+	color: #1E3001;
+	text-align: center;
 }

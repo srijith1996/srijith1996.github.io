@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 
+<!-- This file was created by...
+	Author: Srijith Nair
+	Date: May 22 2015 22:36:01
+-->
+
 <!--I intend to introduce myself in this webpage.
 	This page will also include a utility calculator-->
+
+<!-- In the forthcoming months, I desire to add more functionality to this webpage and create my own website using GitHub pages-->
 <html>
 
 	<head>
@@ -15,7 +22,11 @@
 	</head>
 
 	<body>
-		<h1 id="main_title">Hello World!</h1>
+		<header id="head">
+			<h1 id="main_title">Hello World!</h1>
+		</header>
+
+		<!-- This section below contains information about the author, me, of course-->
 		<h4>About Me:</h4>
 		<section id="info_section">
 			<p class="others"><span id="first_letter">I</span> am a student and will always be one.</p>
@@ -24,6 +35,7 @@
 				<li class="personal"><strong>Full Name:</strong> Srijith Srinivasan Nair</li>
 				<li class="personal"><strong>Home Town:</strong> Mumbai, India</li>
 				<li class="personal"><strong>Education:</strong> Electronics and Communication Engineering Department, NIT Trichy, India</li>
+				<br/>
 
 				<li class="others"><strong>My Interests </strong>:-
 					<ol>
@@ -36,23 +48,74 @@
 
 				<li class="others"><strong>Favorite Quotes </strong>:-
 					<ol>
-						<li>"Sometimes, It is better to shut your mouth and let people think you are a fool, than to open it and clear their doubts."  -<em>Leo Tolstoy</em></li>
-						<li>"To shine like the sun, you have to first burn like it."  -<em>Adolf Hitler</em></li>
-						<li>"A good speech should be like a woman's skirt, long enough to cover the subject, but short enough to create the interest."  -<em>Winston Churchill</em></li>
+						<li>"Sometimes, It's better to shut your mouth and let people think you are a fool, than to open it and clear their doubts."  -<a target="_blank" href="http://en.wikipedia.org/wiki/Leo_Tolstoy">Leo Tolstoy</a></li>
+						<li>"To shine like the sun, you have to first burn like it."  -<a target="_blank" href="http://en.wikipedia.org/wiki/Adolf_Hitler">Adolf Hitler</a></li>
+						<li>"A good speech should be like a woman's skirt, long enough to cover the subject, but short enough to create the interest."  -<a target="_blank" href="http://en.wikipedia.org/wiki/Winston_Churchill">Winston Churchill</a></li>
 					</ol>
 				</li>
 			</ul>
 			<br/>
 		</section>
 
+		<!-- This aside section contains an image for the page. I chose the white-panther because it it is rare and my favorite-->
 		<aside>
 			<figure>
 				<img id="profile_image" src="images/white_panther.jpg"/>
-				<figcaption><div id="profile_caption">I like the <strong>White-Panther</strong> a lot. Poor thing is very rare.</div></figcaption>
+				<figcaption><div id="profile_caption">I like the <a target="blank" href="https://en.wikipedia.org/wiki/White_panther">White-Panther</a> a lot. Poor thing is very rare.</div></figcaption>
 			</figure>
 		</aside>
 
-		<footer>Copyright <strong>&copy; 2015 Srijith Nair</strong></footer>
+		<!--This section is meant to impart some basic knowledge about different developer tools offered by the web for various
+			programming languages and domains. It will have the format of drop-down lists-->
+		<section id="know_section">
+			
+		</section>
+
+		<!-- A basic calculator for the users operation purpose -->
+		<h4 style="text-align: center">Calculator | Basic</h4>
+		<section id="calculator">
+			<br/>
+			<!--This is the area in the calculator which will contain the inputted content from the user on the keypad
+				it is a simple HTML section tag that will render real-time formatted expression input by the user-->
+			<section id="text_area">265*32+88</section>
+
+			<!-- The keypad area is designed as a basic HTML table with the table cells as CSS styled buttons
+				with the functionality of actual calculator keypad numbers and operators-->
+			<table id="keypad">
+				<tr>
+					<td id="clear" class="utility">C</td>
+					<td id="backspace" class="utility">&lt;--</td>
+					<td class="operators">x</td>
+					<td class="operators">&divide;</td>
+				</tr>
+				<tr>
+					<td class="numbers">7</td>
+					<td class="numbers">8</td>
+					<td class="numbers">9</td>
+					<td class="operators">-</td>
+				</tr>
+				<tr>
+					<td class="numbers">4</td>
+					<td class="numbers">5</td>
+					<td class="numbers">6</td>
+					<td class="operators">+</td>
+				</tr>
+				<tr>
+					<td class="numbers">1</td>
+					<td class="numbers">2</td>
+					<td class="numbers">3</td>
+					<td id="equal" class="operators" rowspan="2">&#61;</td>
+				</tr>
+				<tr>
+					<td class="numbers" colspan="2">0</td>
+					<td class="numbers">.</td>
+				</tr>
+			</table>
+		</section>
+
+		<br/>
+		<!-- footer consists of the copyright information-->
+		<footer>Copyright <strong>&copy; 2015 <a href="index.html">Srijith Nair</a></strong></footer>
 	</body>
 
 </html>
