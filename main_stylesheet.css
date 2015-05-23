@@ -141,9 +141,22 @@ ul{
 	border-radius: 10px;
 	box-shadow: inset 0px 0px 10px #6E400F;
 	cursor: text;
-	text-align: right;
+	position: relative;
 	font-family: Courier, sans-serif;
+}
+#expression{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 10px;
 	font-size: 2em;
+}
+#result{
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 10px;
+	font-size: 1.3em;
 }
 
 /* this is a table where all the keys are arranged*/

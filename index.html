@@ -18,6 +18,7 @@
 		<meta name="description" content="Introduces me to the world, and a calculator for fun."/>
 		<meta name="languages" content="HTML, CSS, JavaScript"/>
 
+		<script type="text/javascript" src="Calculator.js"></script>
 		<link type="text/css" rel="stylesheet" href="main_stylesheet.css"/>
 	</head>
 
@@ -77,7 +78,10 @@
 			<br/>
 			<!--This is the area in the calculator which will contain the inputted content from the user on the keypad
 				it is a simple HTML section tag that will render real-time formatted expression input by the user-->
-			<section id="text_area">265*32+88</section>
+			<section id="text_area">
+				<span id="result"></span>
+				<span id="expression"></span>
+			</section>
 
 			<!-- The keypad area is designed as a basic HTML table with the table cells as CSS styled buttons
 				with the functionality of actual calculator keypad numbers and operators-->
@@ -85,29 +89,29 @@
 				<tr>
 					<td id="clear" class="utility">C</td>
 					<td id="backspace" class="utility">&lt;--</td>
-					<td class="operators">x</td>
-					<td class="operators">&divide;</td>
+					<td class="operators" onclick="onInputClick('*')">x</td>
+					<td class="operators" onclick="onInputClick('/')">&divide;</td>
 				</tr>
 				<tr>
-					<td class="numbers">7</td>
-					<td class="numbers">8</td>
-					<td class="numbers">9</td>
-					<td class="operators">-</td>
+					<td class="numbers" onclick="onInputClick('7')">7</td>
+					<td class="numbers" onclick="onInputClick('8')">8</td>
+					<td class="numbers" onclick="onInputClick('9')">9</td>
+					<td class="operators" onclick="onInputClick('-')">-</td>
 				</tr>
 				<tr>
-					<td class="numbers">4</td>
-					<td class="numbers">5</td>
-					<td class="numbers">6</td>
-					<td class="operators">+</td>
+					<td class="numbers" onclick="onInputClick('4')">4</td>
+					<td class="numbers" onclick="onInputClick('5')">5</td>
+					<td class="numbers" onclick="onInputClick('6')">6</td>
+					<td class="operators" onclick="onInputClick('+')">+</td>
 				</tr>
 				<tr>
-					<td class="numbers">1</td>
-					<td class="numbers">2</td>
-					<td class="numbers">3</td>
+					<td class="numbers" onclick="onInputClick('1')">1</td>
+					<td class="numbers" onclick="onInputClick('2')">2</td>
+					<td class="numbers" onclick="onInputClick('3')">3</td>
 					<td id="equal" class="operators" rowspan="2">&#61;</td>
 				</tr>
 				<tr>
-					<td class="numbers" colspan="2">0</td>
+					<td class="numbers" colspan="2" onclick="onInputClick('0')">0</td>
 					<td class="numbers">.</td>
 				</tr>
 			</table>
@@ -116,6 +120,7 @@
 		<br/>
 		<!-- footer consists of the copyright information-->
 		<footer>Copyright <strong>&copy; 2015 <a href="index.html">Srijith Nair</a></strong></footer>
+
 	</body>
 
 </html>
