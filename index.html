@@ -79,7 +79,7 @@
 			<!--This is the area in the calculator which will contain the inputted content from the user on the keypad
 				it is a simple HTML section tag that will render real-time formatted expression input by the user-->
 			<section id="text_area">
-				<span id="result"></span>
+				<span id="result">0</span>
 				<span id="expression"></span>
 			</section>
 
@@ -87,8 +87,8 @@
 				with the functionality of actual calculator keypad numbers and operators-->
 			<table id="keypad">
 				<tr>
-					<td id="clear" class="utility">C</td>
-					<td id="backspace" class="utility">&lt;--</td>
+					<td id="clear" class="utility" onclick="clearScreen()">C</td>
+					<td id="backspace" class="utility" onclick="eraseCharacter()">&lt;--</td>
 					<td class="operators" onclick="onInputClick('*')">x</td>
 					<td class="operators" onclick="onInputClick('/')">&divide;</td>
 				</tr>
@@ -108,11 +108,11 @@
 					<td class="numbers" onclick="onInputClick('1')">1</td>
 					<td class="numbers" onclick="onInputClick('2')">2</td>
 					<td class="numbers" onclick="onInputClick('3')">3</td>
-					<td id="equal" class="operators" rowspan="2">&#61;</td>
+					<td id="equal" class="operators" rowspan="2" onclick="executeFinal()">&#61;</td>
 				</tr>
 				<tr>
 					<td class="numbers" colspan="2" onclick="onInputClick('0')">0</td>
-					<td class="numbers">.</td>
+					<td class="numbers" onclick="onInputClick('.')">.</td>
 				</tr>
 			</table>
 		</section>
