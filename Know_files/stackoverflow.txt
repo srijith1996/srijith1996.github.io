@@ -1,0 +1,2 @@
+	This website is a discussion forum where many interesting discussions take place about all types of software development ranging from linux scripting to web development. The world is very vast and we realize this fact when we become a part of such discussion forums. Most of the issues I have had while learning to develop this webpage has been solved by StackOverFlow.
+	If you have doubts while learning to code, search it in StackOverFlow and you will get it solved.

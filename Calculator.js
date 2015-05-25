@@ -5,9 +5,9 @@ function onInputClick(character){
 	//document.getElementById("info_section").innerHTML = "nothing here";
 	//if the character click input is a number then append to the expression span tag
 	//otherwise an operator is appended to the result span tag
-	if(document.getElementById("expression").innerHTML.length>=14){
+	if(document.getElementById("expression").innerHTML.length>=14 && ((character >='0' &&  character <='9') || character == '.')){
 		return;
-	} else if((character >='0' &&  character <='9') | character == '.'){
+	} else if((character >='0' &&  character <='9') || character == '.'){
 		document.getElementById("expression").innerHTML += character;
 	} else {
 		var res = document.getElementById("result").innerHTML;
@@ -15,7 +15,7 @@ function onInputClick(character){
 
 		//check if the last character in the result string is a character corresponding to the operations
 		//if yes then do not enter the input into the result span tag
-		if((document.getElementById("expression").innerHTML == "") & (lastChar == '+' || lastChar == '-' || lastChar == '*' || lastChar == '/')){
+		if((document.getElementById("expression").innerHTML == "") && (lastChar == '+' || lastChar == '-' || lastChar == '*' || lastChar == '/')){
 			return;
 		} else{
 			evaluateExpression();
@@ -55,6 +55,7 @@ function evaluateExpression(){
 		ans = res / exp;
 	}
 	
+	ans = ans.toFixed(8); 
 	//set the calculator display accordingly
 	document.getElementById("result").innerHTML = ans;
 	document.getElementById("expression").innerHTML = "";
@@ -96,7 +97,7 @@ function executeFinal(){
 	}else{
 		//otherwise evaluate the expression given and reverse the texts in the two text areas, so that the result looks big.
 		evaluateExpression();
-		document.getElementById("expression").innerHTML = document.getElementById("result").innerHTML;
+		document.getElementById("expression").innerHTML = document.getElementById("result").innerHTML.substring(0, 14);
 		document.getElementById("result").innerHTML = "0";
 	}
 

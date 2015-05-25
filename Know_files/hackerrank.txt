@@ -1,0 +1,2 @@
+	HackerRank is a competitive coding website. Here developers and competitive algorithmic coders from round the world compete to solve some of the toughest coding problems.
+	This website provides various problems ranging from elementary levels to some of the latest ongoing research problems in fields like machine learning and AI. This is not a starting point in a coder's learning career, but definitely could help one who wants to put his coding skills to a test. It is a website worth trying out atleast once in a person's coding career.

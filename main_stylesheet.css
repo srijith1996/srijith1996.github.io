@@ -13,7 +13,7 @@ h4{
 	color: #593216;
 	font-family: Courier, sans-serif;
 	text-align: left;
-	font-size: 1.7em;
+	font-size: 1.5em;
 	font-weight: bolder;
 	padding-top: 100px;
 }
@@ -24,7 +24,7 @@ h4{
 	background-image: url("images/Christmas-Background.jpeg");
 	display: block;
 	width: 100%;
-	height: 100px;
+	height: 15%;
 	top: 0px;
 	box-shadow: 0px 10px 20px -16px black;
 	right: 0px;
@@ -35,33 +35,46 @@ h4{
 .personal{
 	font-family: cursive;
 	color: #7A4F05;
+	width: 97%;
+	padding: 4px;
 }
 
 /*This contains a paragraph and other personal interests of the author*/
 .others{
 	font-family: cursive;
 	color: #735C03;
+	width: 97%;
+	padding: 4px;
+}
+
+/*common styling for the unordered list*/
+ul{
+	color: #041533;
 }
 
 /*This is the head which is the 'hello world!' for now*/
 #main_title{
 	color: #1E1000;
 	font-family: Verdana, serif;
-	font-size: 3em;
+	position: relative;
+	font-size: 1.7em;
 	text-align: left;
 	text-shadow: 0px 0px 10px #574119;
 }
 
 /*this is the 'about me section' that you see on the page*/
-#info_section{
+.subpages{
 	display: inline-block;
-	background-color: #FCDE65;	
-	width: 700px;
+	background-color: #FCDE65;
+	/*do not keep the width upto 100% after the section reaches a maximum width of 720px*/
+	max-width: 720px;	
+	width: 100%;
+	padding: 2px;
 	box-shadow: 0px 0px 20px #574119;
 }
 
 /* The paragraphs first letter has to look GOOD ;)*/
-#first_letter{
+.first_letter{
 	color: #4D3304;
 	font-family: Courier, Verdana, Arial, serif;
 	font-size: 2em;
@@ -83,7 +96,10 @@ a:hover{
 aside{
 	display: inline-block;
 	margin-right: 0 auto;
-	width: 512px;
+	/*The following property is so that the inline-block takes effect after 520px*/
+	max-width: 520px;
+	width: 100%;
+	padding: 2%;
 }
 
 /*This the only image in the aside tag*/
@@ -91,8 +107,8 @@ aside{
 	border: 4px solid #DBA746;
 	border-top-right-radius: 20px;
 	border-top-left-radius: 20px;
-	width: 512px;
-	height: 320px;
+	width: 97%;
+	height: 60.625%;
 	box-shadow: 0px 0px 30px #574119;
 }
 
@@ -103,17 +119,61 @@ aside{
 	box-shadow: 0px 0px 30px #574119;
 	border-bottom-right-radius: 20px;
 	border-bottom-left-radius: 20px;
-	background-color: #DBA746;;
-	width: 512px;
+	background-color: #DBA746;
+	width: 97%;
 	text-align: center;	
 	color: #2E331E;
 }
 
-/*common styling for the unordered list*/
-ul{
-	color: #041533;
-	width: 620px;
+
+
+
+/*here all the specific-to-knowledge-section-attributes are specified*/
+
+#know_section{
+	max-width: 850px;
 }
+/*The drop-downs which will have the title of the content in them*/
+.lists{
+	padding: 15px;
+	color: #7A4F05;
+	background-color: #D19028;
+	text-align: left;
+	margin: 0 auto;
+	font-size: 1.05em;
+	font-family: Arial, serif;
+	font-weight: bold;
+	border: 0.5px solid #DBA746;
+	border-radius: 20px;
+	cursor: pointer;
+	max-width: 650px;
+	width: 80%;
+	height: 2%;
+}
+.lists:hover{
+	box-shadow: 0px 0px 7px #574119;
+}
+.lists:active{
+	box-shadow: none;
+
+}
+
+/*The Paragraphs in the know_section are labelled with the class comments*/
+.comments{
+	padding: 3%;
+	color: #735C03;
+	font-family: Times, cursive;
+	font-size: 1.1em;
+}
+
+.lists div{
+	display: none;
+	font-family: Arial, sans-serif;
+	font-size: 0.8em;
+	color: #9E2706;
+}
+
+
 
 
 
@@ -122,8 +182,9 @@ ul{
 /*calculator section tag is styled here*/
 #calculator{
 	margin: 0 auto;
-	width: 320px;
-	height: 400px;
+	max-width: 300px;
+	width: 68%;/*on computer screen (720p) 320px*/
+	height: 85%;/*on computer screen (720p) 400px*/
 	background-color: #FCDE65;
 	border: 4px solid #DBA746;
 	border-radius: 20px;
@@ -134,14 +195,13 @@ ul{
 /* the text area is a separate subsection of the calculator, the text of the calculator will be entered here */
 #text_area{
 	margin: 0 auto;
-	width: 290px;
-	height: 100px;
+	height: 100px;/*100px*/
 	background-color: #EDF7F3;
 	border: 1px solid black;
 	border-radius: 10px;
 	box-shadow: inset 0px 0px 10px #6E400F;
-	cursor: text;
 	position: relative;
+	cursor: text;
 	font-family: Courier, sans-serif;
 }
 #expression{
@@ -149,15 +209,14 @@ ul{
 	bottom: 0;
 	right: 0;
 	padding: 10px;
-	font-size: 2em;
-	
+	font-size: 1.3em;
 }
 #result{
 	position: absolute;
 	top: 0;
 	right: 0;
 	padding: 10px;
-	font-size: 1.3em;
+	font-size: 1.1em;
 }
 
 /* this is a table where all the keys are arranged*/

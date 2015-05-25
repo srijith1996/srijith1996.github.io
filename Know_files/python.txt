@@ -1,0 +1,2 @@
+	Python is a wonderful programming language. I say so because its syntax is very simple and intuitive, unlike C or C++. You do not need to mess with the curly braces and the semicolons anymore. Python has an extensive library support for developing almost anything.
+	It has library methods for scripting Operating System Scripts to developing web applications. One drawback with python is that it is a slow language in execution process. You wouldn't use it for developing or maintaining operating systems.

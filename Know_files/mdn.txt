@@ -1,0 +1,2 @@
+	The Mozilla Developer Network (MDN), is an association of web developers. It is an awesome place to learn web development straight from the leading developers in the field. MDN has pages on all different features of HTML, CSS, JavaScript, PHP, and many other programming languages used for developing websites. 
+	If you desire to be a true blood web developer, this is your starting place. You could start trying development alongside going through these pages in MDN.
