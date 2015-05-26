@@ -1,0 +1,2 @@
+	CodeCademy is an awesome website to start learning how to code. It has a platform consisting of a code editor. You can try your code hands-on in this section based on the provided instructions. It teaches programming syntax and the how-to's in programming. It also has an open forum for discussions and clearing queries.
+	I found it very useful learning JavaScript, CSS, and HTML from there. The last and the best part is that the membership registeration process in CodeCademy is free of cost.

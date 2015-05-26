@@ -1,0 +1,4 @@
+	Eclipse is more than just an Integrated Development Environment (IDE); it is a community of developers. This means that Eclipse is under a state of constant and fast development.
+	An IDE is a workstation which a developer uses to develop applications in an easy way. The benefit of an IDE is that it automates some basic development processes like creating makefiles for C++ development, xml web descriptors for web development, compilation of source code, etc. This is very helpful for the programmer, who does not have to go through that procedure for every project.
+	The best part of eclipse is that it is based on the idea of plugins. Almost any kind of development in any language is made possible with a suitable plugin pack for the IDE. Many features of Eclipse help in providing easy and quick development experience, and neat maintenance of the working directory structure.
+

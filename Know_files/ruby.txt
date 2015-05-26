@@ -1,0 +1,2 @@
+	Ruby is another, not-so-popular, language. It is used for web development especially at the backend. The creator of Ruby wanted its users to focus more on their programming concepts than on the syntax of the code. Similar to python, its syntax is very simple. It does not require a lot of knowledge to get started with such programming languages. It is again a much slower language in code execution but very helpful in reducing the size of code written.
+	Ruby can be a good language to start with to learn coding and development.

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<!-- This file was created by...
+	Author: Srijith Nair
+	Date: May 22 2015 22:36:01
+-->
+
+<!--I intend to introduce myself in this webpage.
+	This page will also include a utility calculator-->
+
+<!-- In the forthcoming months, I desire to add more functionality to this webpage and create my own website using GitHub pages-->
+<html>
+
+	<head>
+		<title>Srijith Nair | About Me</title>
+		<meta charset="UTF-8"/>
+		<meta name="author" content="Srijith Nair"/>
+		<meta name="description" content="Introduces me to the world, and a calculator for fun."/>
+		<meta name="languages" content="HTML, CSS, JavaScript"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+		<script type="text/javascript" src="KnowSectionLists.js"></script>
+		<script type="text/javascript" src="Calculator.js"></script>
+		<link type="text/css" rel="stylesheet" href="main_stylesheet.css"/>
+	</head>
+
+	<body>
+		<header id="head">
+			<h1 id="main_title">Hello World!</h1>
+		</header>
+
+		<!-- This section below contains information about the author, me, of course-->
+		<h4>About The Author</h4>
+		<section class="subpages" id="info_section">
+			<p class="others"><span class="first_letter">I</span> am a student and will always be one.</p>
+			<ul>
+				<li class="personal"><strong>Age:</strong> 18 years</li>
+				<li class="personal"><strong>Full Name:</strong> Srijith Srinivasan Nair</li>
+				<li class="personal"><strong>Home Town:</strong> Mumbai, India</li>
+				<li class="personal"><strong>Education:</strong> Electronics and Communication Engineering Department, NIT Trichy, India</li>
+				<br/>
+
+				<li class="others"><strong>My Interests </strong>:-
+					<ol>
+						<li>I primarily like logical reasoning and computer applications</li>
+						<li>I love electronics as well</li>
+						<li>I enjoy reading books (but I am not a nerd.)</li>
+						<li>I am interested in computer science and artificial intelligence</li>
+					</ol>
+				</li>
+
+				<li class="others"><strong>Favorite Quotes </strong>:-
+					<ol>
+						<li>"Sometimes, It's better to shut your mouth and let people think you are a fool, than to open it and clear their doubts."  -<a target="_blank" href="http://en.wikipedia.org/wiki/Leo_Tolstoy">Leo Tolstoy</a></li>
+						<li>"To shine like the sun, you have to first burn like it."  -<a target="_blank" href="http://en.wikipedia.org/wiki/Adolf_Hitler">Adolf Hitler</a></li>
+						<li>"A good speech should be like a woman's skirt, long enough to cover the subject, but short enough to create the interest."  -<a target="_blank" href="http://en.wikipedia.org/wiki/Winston_Churchill">Winston Churchill</a></li>
+					</ol>
+				</li>
+			</ul>
+			<br/>
+		</section>
+
+		<!-- This aside section contains an image for the page. I chose the white-panther because it it is rare and my favorite-->
+		<aside>
+			<figure>
+				<img id="profile_image" src="images/white_panther.jpg"/>
+				<figcaption><div id="profile_caption">I like the <a target="blank" href="https://en.wikipedia.org/wiki/White_panther">White Panther</a> a lot. Poor thing, is very rare.</div></figcaption>
+			</figure>
+		</aside>
+
+		<!--This section is meant to impart some basic knowledge about different developer tools offered by the web for various
+			programming languages and domains. It will have the format of drop-down lists-->
+		<h4>Some links to computer education sources</h4>
+		<section class="subpages" id="know_section">
+			<p class="comments">
+				<span class="first_letter">T</span>he computer has developed from a machine in an experimental state to a device used by almost everyone on a daily basis. It no more is an option for engineers to learn how to program and maintain a computer. This section is for those young engineers like me, who want to learn computer programming. I have a few tool descriptions and the following sections about programming languages which are popular today.
+			</p>
+			<p class="comments">Click on the following drop-downs to see the details and related links for the material. Hope you find these useful</p>
+
+			<div class="lists" onclick="onListClick(0)">Git &amp; GitHub<div class="data">
+					<p>Before knowing what Git is, any beginner should have an idea of a Version Control System, or VCS for short. A Version control system, helps a developer or an organisation keep track of the changes they make to their products over time. This is done by saving different versions of their code and data by a process known as versioning. It also allows multiple developers or employees of an organisation work on the same section of software at the same time by "branching" the work.</p>
+					<p>Git is a VCS created and maintained by the developers of Linux operating system, for the necessity to have a VCS to version the operating system itself. Git, unlike previous VCS's has its own method of version control. Git repositories are initialized in a working directory to initiate the versioning process. Commits are made to the repository whenever instances are desired to be saved. Git, unlike other VCS's does not "delta compress" files while a commit is made. Delta compression is a method of storing changes made to a file in the form of additions and deletions. At the time of commits, Git treats the files as a single 'snapshot' and stores all the data as a modified file.</p>
+					<p>Git also helps developers to share data by "pushing" and "pulling" repositories. Git does not work on any server. When a pull is initiated, Git creates an exact copy of the original repository in the user's local computer. A user can work offline with Git. Other VCS's lack such features.</p>
+
+					<p>You can get further details of Git and GitHub here:</p>
+					<a href="http://en.wikipedia.org/wiki/Git_(software)" target="_blank">Wiki on Git</a>
+					<a href="https://www.github.com/" target="_blank">Visit GitHub</a><br/>
+					<a href="https://www.git-scm.com/" target="_blank">Get Resources to learn Git</a>
+			</div></div>
+			<div class="lists" onclick="onListClick(1)">Eclipse IDE &amp; Tools<div class="data">
+					<p>Eclipse is more than just an Integrated Development Environment (IDE); it is a community of developers. This means that Eclipse is under a state of constant and fast development.</p>
+					<p>An IDE is a workstation which a developer uses to develop applications in an easy way. The benefit of an IDE is that it automates some basic development processes like creating makefiles for C++ development, xml web descriptors for web development, compilation of source code, etc. This is very helpful for the programmer, who does not have to go through that procedure for every project.</p>
+					<p>The best part of eclipse is that it is based on the idea of plugins. Almost any kind of development in any language is made possible with a suitable plugin pack for the IDE. Many features of Eclipse help in providing easy and quick development experience, and neat maintenance of the working directory structure.</p>
+
+					<p>For further information on Eclipse you can follow the given links</p>
+					<a href="http://en.wikipedia.org/wiki/Eclipse_(software) target="_blank"">Wiki on Eclipse</a><br/>
+					<a href="http://eclipse.org" target="_blank">Eclipse Website</a>
+
+			</div></div>
+			<div class="lists" onclick="onListClick(2)">Sublime Text<div class="data">
+					<p>Sublime Text is a very beautiful text editor for development. It has development support for most of the programming languages. It is designed to give the least trouble to a progrmmer. In fact, I used Sublime Text editor to type the html, css and javascript required for this webpage.</p>
+					<p>You will definitely fall in love with this editor.</p>
+
+					<p>Help yourself to learn how to use this editor here</p>
+					<a href="http://sublimetext.com/" target="_blank">SublimeText</a>
+			</div></div>
+
+			<p class="comments">Here are some of the places where you can start learning stuff straight off: </p>
+
+			<div class="lists" onclick="onListClick(3)">CodeCademy<div class="data">
+					<p>CodeCademy is an awesome website to start learning how to code. It has a platform consisting of a code editor. You can try your code hands-on in this section based on the provided instructions. It teaches programming syntax and the how-to's in programming. It also has an open forum for discussions and clearing queries.</p>
+					<p>I found it very useful learning JavaScript, CSS, and HTML from there. The last and the best part is that the membership registeration process in CodeCademy is free of cost.</p>
+
+					<p>Clicking on this link will redirect you to <a href="http://www.codecademy.com" target="_blank">CodeCademy</a></p>
+
+			</div></div>
+			<div class="lists" onclick="onListClick(4)">StackOverFlow<div class="data">
+					<p>This website is a discussion forum where many interesting discussions take place about all types of software development ranging from linux scripting to web development. The world is very vast and we realize this fact when we become a part of such discussion forums. Most of the issues I have had while learning to develop this webpage has been solved by StackOverFlow.</p>
+					<p>If you have doubts while learning to code, search it in StackOverFlow and you will get it solved.</p>
+
+					<p>Clicking this link directs you to <a href="http://stackoverflow.com" target="_blank">StackOverFlow</a></p>
+
+			</div></div>
+			<div class="lists" onclick="onListClick(5)">HackerRank<div class="data">
+					<p>HackerRank is a competitive coding website. Here developers and competitive algorithmic coders from round the world compete to solve some of the toughest coding problems.</p>
+					<p>This website provides various problems ranging from elementary levels to some of the latest ongoing research problems in fields like machine learning and AI. This is not a starting point in a coder's learning career, but definitely could help one who wants to put his coding skills to a test. It is a website worth trying out atleast once in a person's coding career.</p>
+
+					<p>Clicking here directs you to <a href="https://www.hackerrank.com" target="_blank">HackerRank</a></p>
+
+			</div></div>
+			<div class="lists" onclick="onListClick(6)">Mozilla Developer Network (MDN)<div class="data">
+					<p>The Mozilla Developer Network (MDN), is an association of web developers. It is an awesome place to learn web development straight from the leading developers in the field. MDN has pages on all different features of HTML, CSS, JavaScript, PHP, and many other programming languages used for developing websites.</p> 
+					<p>If you desire to be a true blood web developer, this is your starting place. You could start trying development alongside going through these pages in MDN.</p>
+
+					<p>This link directs you to the <a href="https://developer.mozilla.org/" target="_blank">Mozilla Developer Network</a></p>
+
+			</div></div>
+
+			<p class="comments">Some Popular languages of today</p>
+			<div class="lists" onclick="onListClick(7)">Python<div class="data">
+					<p>Python is a wonderful programming language. I say so because its syntax is very simple and intuitive, unlike C or C++. You do not need to mess with the curly braces and the semicolons anymore. Python has an extensive library support for developing almost anything.</p>
+					<p>It has library methods for scripting Operating System Scripts to developing web applications. One drawback with python is that it is a slow language in execution process. You wouldn't use it for developing or maintaining operating systems.</p>
+
+					<p>The link here will direct you to the <a href="https://docs.python.org/">Python Documentation</a></p>
+					<a href="">Wiki on Python</a>
+			</div></div>
+			<div class="lists" onclick="onListClick(8)">JavaScript<div class="data">
+					<p>JavaScript is a programming language, very similar in construction to its ancestor, Java, but has subtle differences in syntax and various additions in its already vast library, specifically for web development. The calculator you see below in this page works purely due to JavaScript.</p>
+					<p>Front-end web applications widely use JavaScript for computing and processing user requests that do not require the interference from the server. Scripting a webpage can be done using many other languages, but JavaScript is just the most prefered. According to some popularity rankings, JavaScript is the most popular programming language in the world.</p>
+
+					<p>Click on this link to read the <a href="" target="_blank">JavaScript Documentation</a></p>
+					<a href="" target="_blank">Wiki on JavaScript</a>
+
+			</div></div>
+			<div class="lists" onclick="onListClick(9)">Ruby<div class="data">
+					<p>Ruby is another, not-so-popular, language. It is used for web development especially at the backend. The creator of Ruby wanted its users to focus more on their programming concepts than on the syntax of the code. Similar to python, its syntax is very simple. It does not require a lot of knowledge to get started with such programming languages. It is again a much slower language in code execution but very helpful in reducing the size of code written.</p>
+					<p>Ruby can be a good language to start with to learn coding and development.</p>
+
+					<p>Click on this link to read the <a href="" target="_blank">Ruby Documentation</a></p>
+					<a href="" target="_blank">Wiki on Ruby</a>
+
+			</div></div>
+			<div class="lists" onclick="onListClick(10)">PHP<div class="data">
+				<p>PHP is in the heart of the Facebook which is so well known to almost anybody aquainted with the web world! PHP is a programming language used to communicate easily to server databases, known as server-side scripting, but it is used as a general-purpose programming language as well.</p>
+
+				<p>Click on this link to read the <a href="" target="_blank">PHP Documentation</a></p>
+				<a href="" target="_blank">Wiki on PHP</a>
+			</div></div>
+		</section>
+
+		<!-- A basic calculator for the users operation purpose -->
+		<h4 style="text-align: center">Calculator | Basic</h4>
+		<section id="calculator">
+			<br/>
+			<!--This is the area in the calculator which will contain the inputted content from the user on the keypad
+				it is a simple HTML section tag that will render real-time formatted expression input by the user-->
+			<section id="text_area">
+				<span id="result">0</span>
+				<span id="expression"></span>
+			</section>
+
+			<!-- The keypad area is designed as a basic HTML table with the table cells as CSS styled buttons
+				with the functionality of actual calculator keypad numbers and operators-->
+			<table id="keypad">
+				<tr>
+					<td id="clear" class="utility" onclick="clearScreen()">C</td>
+					<td id="backspace" class="utility" onclick="eraseCharacter()">&#65513;</td>
+					<td class="operators" onclick="onInputClick('*')">x</td>
+					<td class="operators" onclick="onInputClick('/')">&divide;</td>
+				</tr>
+				<tr>
+					<td class="numbers" onclick="onInputClick('7')">7</td>
+					<td class="numbers" onclick="onInputClick('8')">8</td>
+					<td class="numbers" onclick="onInputClick('9')">9</td>
+					<td class="operators" onclick="onInputClick('-')">-</td>
+				</tr>
+				<tr>
+					<td class="numbers" onclick="onInputClick('4')">4</td>
+					<td class="numbers" onclick="onInputClick('5')">5</td>
+					<td class="numbers" onclick="onInputClick('6')">6</td>
+					<td class="operators" onclick="onInputClick('+')">+</td>
+				</tr>
+				<tr>
+					<td class="numbers" onclick="onInputClick('1')">1</td>
+					<td class="numbers" onclick="onInputClick('2')">2</td>
+					<td class="numbers" onclick="onInputClick('3')">3</td>
+					<td id="equal" class="operators" rowspan="2" onclick="executeFinal()">&#61;</td>
+				</tr>
+				<tr>
+					<td class="numbers" colspan="2" onclick="onInputClick('0')">0</td>
+					<td class="numbers" onclick="onInputClick('.')">.</td>
+				</tr>
+			</table>
+		</section>
+
+		<br/>
+		<!-- footer consists of the copyright information-->
+		<footer>Copyright <strong>&copy; 2015 <a href="index.html">Srijith Nair</a></strong></footer>
+
+	</body>
+
+</html>
