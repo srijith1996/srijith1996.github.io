@@ -5,7 +5,7 @@ subtitle: PhD student in Machine Learning / Passionate about Applied Math & Codi
 cover-img: /assets/img/path.jpg
 ---
 
-<h3>About Me</h3>
+<h2>About Me</h2>
 <p align="justify">
 I am a PhD candidate at The Ohio State University under the guidance of
 <a href="https://kevinliu-osu.github.io/">Prof. Jia (Kevin) Liu</a>.
@@ -29,14 +29,15 @@ In my spare time, I love playing racquet sports, hiking, singing, playing the
 guitar, and reading books.
 </p>
 
-<h2>Latest News</h2>
+<br/>
+<h3>Latest News</h3>
 <section id="latest-news">
-        {% for item in site.data.news %}
-            <li>
-                <span class="news-date">{{ item.date | date: "%b %d, %Y" }}</span>
-                <span class="news-text">{{ item.text }}</span>
-            </li>
-        {% endfor %}
+    {% for item in site.data.news %}
+        <li>
+            <span class="news-date">{{ item.date | date: "%b %d, %Y" }}</span>
+            <span class="news-text">{{ item.text }}</span>
+        </li>
+    {% endfor %}
 </section>
 
 <link rel="stylesheet" href="{{ '/assets/css/latest-news.css' | relative_url }}">
