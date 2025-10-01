@@ -34,6 +34,11 @@ navbar-links:
   #   - Learn markdown: "https://www.markdowntutorial.com/"
   # Author's home: "https://srijith1996.github.io"
 
+collections:
+  projects:
+    output: true
+    permalink: /projects/:title/
+
 ###############Srijith#
 # --- Logo --- #
 ################
