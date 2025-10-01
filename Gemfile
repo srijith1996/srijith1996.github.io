@@ -14,3 +14,11 @@ gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
   
 gemspec
 
+
+gem "webrick", "~> 1.9"
+
+gem "bigdecimal", "~> 3.2"
+
+gem "logger", "~> 1.7"
+
+gem "jekyll-theme-minimal", "~> 0.2.0"
