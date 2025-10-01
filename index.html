@@ -1,5 +1,42 @@
 ---
-layout: home
-title: Srijith Nair
-subtitle: 
+layout: page
+title: Hi, I am Srijith
+subtitle: PhD student in Machine Learning / Passionate about Applied Math & Coding / Avid Nature Lover
+cover-img: /assets/img/path.jpg
 ---
+
+<h3>About Me</h3>
+<p align="justify">
+I am a PhD candidate at The Ohio State University under the guidance of
+<a href="https://kevinliu-osu.github.io/">Prof. Jia (Kevin) Liu</a>.
+I am very passionate about research in the field of Deep Learning, particularly
+efficient Distributed Deep Learning, from theoretical first principles to its
+applications in Natural Language Processing and Image Processing.
+My current research interests are in the broad areas of Federated Learning,
+Continual Learning and Multi-objective Prompt Optimization.
+In the initial years of my MS/PhD at OSU, I worked with <a
+href="https://ece.osu.edu/people/schniter.1">Prof. Philip Schniter</a> in 
+Deep Regularization methods for Image Processing, Approximate Message
+Passing algorithms for image inverse applications.
+Prior to doing my PhD, I worked at the Indian Institute of Science (IISc)
+Bangalore, with
+<a href="https://cds.iisc.ac.in/faculty/simmhan/">Prof. Yogesh Simmhan</a>,
+<a href="https://ieeexplore.ieee.org/author/37409940600">Dr. Malati Hegde</a>,
+and <a href="https://ieeexplore.ieee.org/author/37085441271">Mr. SVR Anand</a>.
+There, I worked on development and real-world deployment of wireless sensor
+networks for air pollution monitoring under the SATVAM project.
+In my spare time, I love playing racquet sports, hiking, singing, playing the
+guitar, and reading books.
+</p>
+
+<h2>Latest News</h2>
+<section id="latest-news">
+        {% for item in site.data.news %}
+            <li>
+                <span class="news-date">{{ item.date | date: "%b %d, %Y" }}</span>
+                <span class="news-text">{{ item.text }}</span>
+            </li>
+        {% endfor %}
+</section>
+
+<link rel="stylesheet" href="{{ '/assets/css/latest-news.css' | relative_url }}">
