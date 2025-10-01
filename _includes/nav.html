@@ -30,6 +30,15 @@
           </li>
         {%- endif -%}
       {%- endfor -%}
+
+      <li class="theme-toggle-container">
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider"></span>
+        </label>
+      </li>
+      <script src="{{ '/assets/js/theme-toggle.js' | absolute_url }}"></script>
+
       {% if site.post_search %}
         <li class="nav-item">
           <a class="nav-link" id="nav-search-link" href="#" title="Search">
