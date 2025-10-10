@@ -15,15 +15,16 @@ gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
 gemspec
 
 
-gem "webrick", "~> 1.9"
+gem "webrick", "~> 1.9", group: :jekyll_plugins
 
-gem "bigdecimal", "~> 3.2"
+gem "bigdecimal", "~> 3.2", group: :jekyll_plugins
 
-gem "logger", "~> 1.7"
+gem "logger", "~> 1.7", group: :jekyll_plugins
 
-gem "jekyll-theme-minimal", "~> 0.2.0"
+gem "jekyll-theme-minimal", "~> 0.2.0", group: :jekyll_plugins
 
-gem 'github-pages', "~> 223", group: :jekyll_plugins
+#gem 'github-pages', "~> 223", group: :jekyll_plugins
+gem 'github-pages', group: :jekyll_plugins
 
 gem "jekyll-include-cache", group: :jekyll_plugins
 
