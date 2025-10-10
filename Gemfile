@@ -26,6 +26,6 @@ gem "jekyll-theme-minimal", "~> 0.2.0", group: :jekyll_plugins
 #gem 'github-pages', "~> 223", group: :jekyll_plugins
 #gem 'github-pages', group: :jekyll_plugins
 
-#gem "jekyll-include-cache", group: :jekyll_plugins
+gem "jekyll-include-cache", group: :jekyll_plugins
 
 gem 'jekyll-scholar', group: :jekyll_plugins
