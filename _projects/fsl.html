@@ -1,0 +1,33 @@
+---
+title: "Federated Split Learning"
+date: 2025-07-11
+image: "/assets/my_img/projects/fsl_sage/fsl_sage_thumb.png"
+description: "Accelerating Federated Split Learning with Provable Convergence"
+---
+
+<h3>FSL-SAGE: Accelerating Federated Split Learning via Smashed Activation Gradient Estimation</h3>
+
+<p><strong>Published in ICML 2025:</strong>
+<a href="https://icml.cc/virtual/2025/poster/45763" target="_blank"><img src="https://img.shields.io/badge/ICML-page-blue" alt="Static Badge"></a>
+<a href="https://openreview.net/forum?id=HnwcrtoDd4" target="_blank"><img src="https://img.shields.io/badge/OpenReview-paper-brown" alt="Static Badge"></a>
+<a href="https://arxiv.org/abs/2505.23182" target="_blank"><img src="https://img.shields.io/badge/ArXiv-paper-red" alt="Static Badge"></a>
+<a href="https://github.com/srijith1996/FSL-SAGE" target="_blank"><img src="https://img.shields.io/badge/Github-source-black" alt="Static Badge"></a></p>
+
+<p style="text-align: justify;">
+As models grow ever larger (e.g. modern neural nets and foundation models), traditional federated learning (FL) begins to strain client devices that lack the memory or compute capacity to host full models. Split learning (SL) offers one workaround by splitting the model between client and server — but it often introduces significant latency and communication overhead because the server must serially assist each client’s training step. Prior hybrid approaches that embed local “auxiliary” losses let clients train in parallel, but they lose server feedback and risk accuracy degradation. The key tension: <strong>how to balance client resource constraints, parallel training, and fidelity to the server’s learning objective</strong>.
+</p>
+
+<center><img src="/assets/my_img/projects/fsl_sage/system.png" width="80%"></center>
+<center>The FSL-SAGE system learns auxiliary models periodically from the server-side model to facilitate local training</center>
+
+<p style="text-align: justify;">
+We introduce <strong>FSL-SAGE</strong> (Federated Split Learning via Smashed Activation Gradient Estimation), a new algorithm that retains parallelism like FL but splits the model like SL. Each client holds a <strong>client-side model</strong> plus a small <strong>auxiliary model</strong>. The auxiliary model is trained to <strong>estimate the server-side gradient feedback</strong> — i.e., it approximates how the server would respond to the client’s “cut-layer” activations. The client uses that estimate to update its parameters, without waiting for the server to compute and send back gradients each round. Periodically, the auxiliary model is realigned (retrained) using real server feedback to stay in sync. This design introduces <strong>multiple time scales</strong> (client updates, server updates, auxiliary alignment), which complicates convergence analysis.
+</p>
+
+<p style="text-align: justify;">
+Theoretically, FSL-SAGE achieves a stationary convergence rate of \( \mathcal{O}(1/\sqrt{T}) \) for \(T\) rounds, matching classical FL bounds despite its split structure — a nontrivial result given the estimation errors introduced by auxiliary models. Empirically, the method outperforms state-of-the-art federated split methods in both communication efficiency and accuracy on benchmark tasks (e.g. ResNet-18, GPT2-medium) (<a href="https://openreview.net/pdf?id=HnwcrtoDd4">openreview.net</a>). In effect, FSL-SAGE offers a practical route toward scalable, privacy-preserving training of large models on edge devices: reducing client load, accelerating convergence, and preserving performance across heterogeneous clients.
+</p>
+
+{% include math.html %}
+
+<embed src="/assets/pdfs/fsl_sage_poster.pdf" type="application/pdf" width="100%" height="900px" />
