@@ -22,3 +22,5 @@ gem "bigdecimal", "~> 3.2"
 gem "logger", "~> 1.7"
 
 gem "jekyll-theme-minimal", "~> 0.2.0"
+
+gem "jekyll-scholar"
