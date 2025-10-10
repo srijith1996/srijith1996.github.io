@@ -30,6 +30,6 @@ gem "jekyll-theme-minimal", group: :jekyll_plugins
 #gem 'github-pages', "~> 223", group: :jekyll_plugins
 #gem 'github-pages', group: :jekyll_plugins
 
-gem "jekyll-include-cache", group: :jekyll_plugins
+gem 'jekyll-scholar', "~> 7.2.1", group: :jekyll_plugins
 
-gem 'jekyll-scholar', group: :jekyll_plugins
+gem "jekyll-include-cache", group: :jekyll_plugins
