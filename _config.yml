@@ -337,6 +337,7 @@ exclude:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-include-cache
   - jekyll-scholar
 
 # Beautiful Jekyll / Dean Attali
