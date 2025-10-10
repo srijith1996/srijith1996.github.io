@@ -23,7 +23,7 @@ author: Srijith Nair
 
 navbar-links:
   # Home: "https://srijith1996.github.io"
-  # About Me: "aboutme"
+  About Me: "index"
   Projects: "projects"
   Publications: "publications"
   # Teaching: "teaching"

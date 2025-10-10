@@ -1,33 +1,52 @@
+.project-card img {
+  width: 100%;
+  height: 180px; /* or whatever height fits your design */
+  object-fit: cover;
+  border-bottom: 1px solid #ccc;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  margin: 2rem 0;
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   border: 1px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
+  background-color: var(--card-bg, #fff);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.project-card img {
-  width: 100%;
-  height: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .project-card h2 {
+  font-size: 1.2rem;
   margin: 1rem;
-  font-size: 1.25rem;
+  min-height: 2.5em; /* ensures consistent title block height */
 }
 
 .project-card p {
+  flex-grow: 1; /* pushes the description to fill the space */
   margin: 0 1rem 1rem 1rem;
   font-size: 1rem;
+  color: #555;
 }
+
+/* @media (prefers-color-scheme: dark) {
+  .project-card {
+    background-color: #1e1e1e;
+    border-color: #333;
+  }
+  .project-card h2, .project-card p {
+    color: #ddd;
+  }
+} */
