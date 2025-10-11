@@ -18,10 +18,12 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.4'
-          bundler-cache: true
+          bundler-cache: false
 
       - name: Install dependencies
-        run: bundle install --without development test
+        run: |
+          gem install appraisal
+          bundle install --without development test
 
       - name: Build the Jekyll site
         run: bundle exec jekyll build

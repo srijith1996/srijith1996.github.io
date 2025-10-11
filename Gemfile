@@ -14,7 +14,10 @@ gem "wdm", :platforms => [:mingw, :x64_mingw, :mswin]
 
 gem "jekyll", "~> 4.3.3", group: :jekyll_plugins
 gem "webrick"
+gem "base64"
 gem "csv"
+gem "jekyll-paginate"
+gem "jekyll-sitemap"
 #gem "bigdecimal", group: :jekyll_plugins
 #, "~> 3.2"
 
