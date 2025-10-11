@@ -1,0 +1,53 @@
+#latest-news {
+  margin: 2em 0;
+  padding: 1em;
+  background: var(--background-secondary);   /* adapts to theme */
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  color: var(--text-primary);               /* adapts to theme */
+}
+
+#latest-news h2 {
+  margin-bottom: 0.5em;
+  position: sticky;
+  top: 0;
+  background: var(--background-secondary);
+  padding: 0.3em 0;
+  color: var(--text-primary);
+}
+
+#latest-news li {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 1em;
+  margin: 0.3em 0;
+  align-items: start;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.news-date {
+  font-weight: bold;
+  color: var(--text-secondary);  /* adapts to theme */
+}
+
+.news-text {
+  white-space: normal;
+  color: var(--text-primary);    /* adapts to theme */
+}
+
+/* Optional: make scrollbar match theme */
+#latest-news::-webkit-scrollbar {
+  width: 8px;
+}
+
+#latest-news::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+}
+
+#latest-news::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color); /* your theme accent */
+  border-radius: 4px;
+}
