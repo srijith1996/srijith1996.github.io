@@ -1,13 +1,57 @@
 ---
 title: "Deep Image Regularization"
 date: 2022-11-01
-image: "/assets/img/avatar-icon.png"
+image: "/assets/my_img/projects/deep_reg/bilevel_reg_thumb.png"
 description: "Bilevel Optimization for convergent deep regularization"
 ---
 
 <h3>Deep Regularization via Bilevel Optimization</h3>
 
-<p style="color: red;">Please stay tuned! This project section will be completed soon.  In the meantime, please refer to the two posters below for details on this project.</p>
+<!-- <p style="color: red;">Please stay tuned! This project section will be completed soon.  In the meantime, please refer to the two posters below for details on this project.</p> -->
+
+<p>
+Two different sub-projects presented at <strong>Asilomar Conference on Signals, Systems, and Computers, 2022</strong>, and <strong>BASP Frontiers, 2023.</strong>
+</p>
+
+  <p style="text-align: justify;">
+    Inverse problems in imaging — such as denoising, deblurring, and medical image reconstruction —
+    require estimating signals from incomplete or noisy data. Classical approaches rely on handcrafted convex
+    regularizers like total variation or wavelet sparsity, which offer convergence guarantees but limited
+    expressiveness. Deep learning has introduced powerful data-driven priors, yet most lack mathematical
+    structure, leading to unstable or non-convergent optimization. This research aims to bridge that gap:
+    <strong>to design learnable deep regularizers that combine the interpretability and convergence of convex methods
+    with the flexibility and accuracy of modern neural networks.</strong>
+  </p>
+
+  <p style="text-align: justify;">
+    We propose a <strong>bi-level learning framework</strong> that trains deep regularizers
+    \( r_\theta(x) \) within a variational optimization setup \( J(x) = d(x; y) + r_\theta(x) \),
+    where \( d \) ensures data fidelity and \( r_\theta \) encodes prior structure.
+    The regularizer’s gradient is constrained through <em>adversarial monotonicity</em> and
+    <em>Lipschitz penalties</em>, ensuring the learned operator behaves like a monotone mapping —
+    a key condition for convergence.
+  </p>
+  <ul>
+    <li><strong>Convex variant:</strong> directly enforces monotonicity on ∇r.</li>
+    <li><strong>Non-convex variant:</strong> relaxes the constraint to the overall energy ∇J,
+      improving expressivity while maintaining stability.</li>
+  </ul>
+  <p>
+    Training proceeds via gradient-step and bi-level optimization, leveraging automatic differentiation and
+    implicit differentiation for end-to-end learning.
+  </p>
+
+  <p style="text-align: justify;">
+    Experiments on Gaussian deblurring and other image-recovery tasks show that these
+    <strong>monotone-regularized networks</strong> outperform both structurally convex and
+    unconstrained baselines, achieving higher PSNR and SSIM with provable convergence guarantees.
+    The approach demonstrates that deep regularizers need not sacrifice stability for accuracy —
+    by embedding monotonicity and smoothness into learning, one can build data-driven inverse solvers
+    that are both expressive and convergent. This framework lays the foundation for
+    <em>interpretable deep optimization</em> in imaging and beyond.
+  </p>
+
+{% include math.html %}
 
 <embed src="/assets/pdfs/deep_reg_poster.pdf" type="application/pdf" width="100%" height="600px" />
 <embed src="/assets/pdfs/adv_convex.pdf" type="application/pdf" width="100%" height="600px" />

@@ -1,0 +1,48 @@
+---
+title: "Geo-distributed Split Learning"
+date: 2025-09-24
+image: "/assets/my_img/projects/fsl_sage/geo_fsl_thumb.png"
+description: "Implementing Federated Split Learning over a geo-distributed setup."
+---
+
+<h3>Implementing Split Learning (SL), Federated SL and FSL-SAGE in a geo-distributed cross-institute test-bed</h3>
+
+<strong><a href="https://aiedge.osu.edu/end-end-problems">NSF AI-EDGE institute: Problem 3</a></strong>
+<br>
+
+<center><img src="/assets/my_img/projects/fsl_sage/dashboard.png"></center>
+<center>Snapshot of a real-time dashboard monitoring a cross institution FSL-SAGE deployment</center>
+
+  <p style="text-align: justify;">
+    Training today’s large language models (LLMs), often comprising hundreds of billions or even trillions of parameters,
+    demands massive computational and data resources—typically accessible only to hyperscale data centers.
+    However, vast pools of heterogeneous and lower-end GPUs already exist across academic and industrial institutions.
+    Harnessing these distributed resources could democratize large-scale model training, but doing so requires orchestrating
+    computation, communication, and data management across geographically separated sites.
+    The AI-EDGE End-to-End Problem 3 tackles this challenge:
+    <strong>how can we collaboratively train and fine-tune LLMs across a federation of edge networks?</strong>
+  </p>
+
+  <p style="text-align: justify;">
+    Our approach builds on the principles of <strong>Federated Learning</strong> and <strong>Split Learning</strong>,
+    combining their strengths into a scalable system that supports distributed pre-training and fine-tuning of LLMs across
+    multiple institutions. While existing FL frameworks focus on full-model training, our
+    <strong>federated split learning (FSL)</strong> system partitions the model between clients and servers—reducing
+    client memory requirements while enabling collaborative gradient-based updates.
+    We implement this through <strong><a href="/projects/fsl/">FSL-SAGE</a></strong> (Federated Split Learning via Smashed Activation Gradient Estimation),
+    a method that estimates server gradients locally to allow asynchronous and communication-efficient training without
+    sacrificing accuracy. The current test-bed spans The Ohio State University, University of Texas at Austin,
+    University of Michigan, and IIT Bombay, each contributing compute and data resources over a geo-distributed network.
+  </p>
+
+  <p style="text-align: justify;">
+    This project represents a major step toward <strong>decentralized foundation model training</strong>—leveraging existing
+    edge hardware for scalable and privacy-preserving AI development. Our framework not only provides an open, extensible
+    platform for collaborative LLM training but also demonstrates that intelligent orchestration and learning design can
+    unlock the latent potential of distributed academic infrastructure. The success of this initiative reflects the combined
+    efforts of the AI-EDGE team, including
+    <a href="https://kevinliu-osu.github.io/">Prof. Jia (Kevin) Liu</a>,
+    <a href="https://ziyueluocs.github.io/">Ziyue Luo</a>,
+    <a href="https://engineering.osu.edu/people/wu.5677">William Wu</a>,
+    Yinglun Xia, and many others.
+  </p>

@@ -1,13 +1,14 @@
 ---
-layout: default
+layout: page
 title: Projects
 permalink: /projects/
 ---
 
-<h1>My Projects</h1>
+<!-- <h1>My Projects</h1> -->
 <!-- <p>Total projects via site.projects: {{ site.projects | size }}</p> -->
 <!-- <p>Total projects via site.collections.projects.docs: {{ site.collections.projects.docs | size }}</p> -->
 
+<br>
 <div class="projects-grid">
     {% assign projects_with_dates = site.projects | where_exp:"p","p.date" %}
     {% assign sorted_projects = projects_with_dates | sort:"date" %}
