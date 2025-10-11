@@ -11,25 +11,20 @@ end
 
 # Performance-booster for watching directories on Windows
 gem "wdm", :platforms => [:mingw, :x64_mingw, :mswin]
-#, "~> 0.1"
-gemspec
 
-
-gem "webrick", group: :jekyll_plugins
-#, "~> 1.9"
-
-gem "bigdecimal", group: :jekyll_plugins
+gem "jekyll", "~> 4.3.3", group: :jekyll_plugins
+gem "webrick"
+gem "csv"
+#gem "bigdecimal", group: :jekyll_plugins
 #, "~> 3.2"
 
-gem "logger", group: :jekyll_plugins
+#gem "logger", group: :jekyll_plugins
 #, "~> 1.7"
 
 gem "jekyll-theme-minimal", group: :jekyll_plugins
-#, "~> 0.2.0"
-
-#gem 'github-pages', "~> 223", group: :jekyll_plugins
 #gem 'github-pages', group: :jekyll_plugins
 
-gem 'jekyll-scholar', "~> 7.2.1", group: :jekyll_plugins
+gem "jekyll-scholar", "~> 7.2.1", group: :jekyll_plugins
 
 gem "jekyll-include-cache", group: :jekyll_plugins
+
