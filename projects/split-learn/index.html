@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  
+
+  <title>Geo-distributed Split Learning | Srijith Nair</title>
+
+  
+  
+  <meta name="author" content="Srijith Nair">
+  
+
+  <meta name="description" content="Implementing Split Learning (SL), Federated SL and FSL-SAGE in a geo-distributed cross-institute test-bed NSF AI-EDGE institute: Problem 3 Snapshot of a real-time dashboard monitoring a cross institution FSL-SAGE deployment Training today’s large language models (LLMs), often comprising hundreds of billions or even trillions of parameters, demands massive computational and data...">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="Srijith Nair">
+  <meta property="og:title" content="Geo-distributed Split Learning | Srijith Nair">
+  <meta property="og:description" content="Implementing Split Learning (SL), Federated SL and FSL-SAGE in a geo-distributed cross-institute test-bed NSF AI-EDGE institute: Problem 3 Snapshot of a real-time dashboard monitoring a cross institution FSL-SAGE deployment Training today’s large language models (LLMs), often comprising hundreds of billions or even trillions of parameters, demands massive computational and data...">
+
+  
+  <meta property="og:image" content="/assets/img/professional-photo.jpg">
+  
+
+  
+  <meta property="og:type" content="article">
+  
+  <meta property="og:article:author" content="Srijith Nair">
+  
+  <meta property="og:article:published_time" content="2025-09-24T00:00:00-04:00">
+  <meta property="og:url" content="/projects/split-learn/">
+  <link rel="canonical" href="/projects/split-learn/">
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="Geo-distributed Split Learning | Srijith Nair">
+  <meta property="twitter:description" content="Implementing Split Learning (SL), Federated SL and FSL-SAGE in a geo-distributed cross-institute test-bed NSF AI-EDGE institute: Problem 3 Snapshot of a real-time dashboard monitoring a cross institution FSL-SAGE deployment Training today’s large language models (LLMs), often comprising hundreds of billions or even trillions of parameters, demands massive computational and data...">
+
+  
+  <meta name="twitter:image" content="/assets/img/professional-photo.jpg">
+  
+
+  
+
+
+  
+
+  
+  
+  <link rel="icon" href="/favicon.png" />
+  
+
+  
+
+  <link rel="stylesheet" href="/assets/css/theme-toggle.css">
+
+</head>
+
+
+<body>
+  
+
+
+  <nav class="navbar navbar-expand-xl fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="/">Srijith Nair</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/publications">Publications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cv">CV</a>
+          </li><li class="theme-toggle-container">
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider"></span>
+        </label>
+      </li>
+      <script src="/assets/js/theme-toggle.js"></script>
+
+      
+        <li class="nav-item">
+          <a class="nav-link" id="nav-search-link" href="#" title="Search">
+            <span id="nav-search-icon" class="fa fa-search"></span>
+            <span id="nav-search-text">Search</span>
+          </a>
+        </li></ul>
+  </div>
+
+  
+
+  
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        <a href="/">
+          <img alt="Navigation bar avatar" class="avatar-img" src="/assets/img/professional-photo.jpg" />
+        </a>
+      </div>
+    </div>
+  
+
+</nav>
+
+
+
+<div id="beautifuljekyll-search-overlay">
+
+  <div id="nav-search-exit" title="Exit search">✕</div>
+  <input type="text" id="nav-search-input" placeholder="Search">
+  <ul id="search-results-container"></ul>
+  
+  <script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
+  <script>
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('nav-search-input'),
+      resultsContainer: document.getElementById('search-results-container'),
+      json: '/assets/data/searchcorpus.json' 
+    });
+  </script>
+</div>
+
+
+
+
+
+  
+
+
+
+<header class="header-section ">
+<div class="intro-header ">
+  
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="page-heading">
+          <h1>Geo-distributed Split Learning</h1>
+          
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+
+
+
+</header>
+
+
+<main class=" container-md ">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+      
+
+      <h3>Implementing Split Learning (SL), Federated SL and FSL-SAGE in a geo-distributed cross-institute test-bed</h3>
+
+<strong><a href="https://aiedge.osu.edu/end-end-problems">NSF AI-EDGE institute: Problem 3</a></strong>
+<br>
+
+<center><img src="/assets/my_img/projects/fsl_sage/dashboard.png"></center>
+<center>Snapshot of a real-time dashboard monitoring a cross institution FSL-SAGE deployment</center>
+
+  <p style="text-align: justify;">
+    Training today’s large language models (LLMs), often comprising hundreds of billions or even trillions of parameters,
+    demands massive computational and data resources—typically accessible only to hyperscale data centers.
+    However, vast pools of heterogeneous and lower-end GPUs already exist across academic and industrial institutions.
+    Harnessing these distributed resources could democratize large-scale model training, but doing so requires orchestrating
+    computation, communication, and data management across geographically separated sites.
+    The AI-EDGE End-to-End Problem 3 tackles this challenge:
+    <strong>how can we collaboratively train and fine-tune LLMs across a federation of edge networks?</strong>
+  </p>
+
+  <p style="text-align: justify;">
+    Our approach builds on the principles of <strong>Federated Learning</strong> and <strong>Split Learning</strong>,
+    combining their strengths into a scalable system that supports distributed pre-training and fine-tuning of LLMs across
+    multiple institutions. While existing FL frameworks focus on full-model training, our
+    <strong>federated split learning (FSL)</strong> system partitions the model between clients and servers—reducing
+    client memory requirements while enabling collaborative gradient-based updates.
+    We implement this through <strong><a href="/projects/fsl/">FSL-SAGE</a></strong> (Federated Split Learning via Smashed Activation Gradient Estimation),
+    a method that estimates server gradients locally to allow asynchronous and communication-efficient training without
+    sacrificing accuracy. The current test-bed spans The Ohio State University, University of Texas at Austin,
+    University of Michigan, and IIT Bombay, each contributing compute and data resources over a geo-distributed network.
+  </p>
+
+  <p style="text-align: justify;">
+    This project represents a major step toward <strong>decentralized foundation model training</strong>—leveraging existing
+    edge hardware for scalable and privacy-preserving AI development. Our framework not only provides an open, extensible
+    platform for collaborative LLM training but also demonstrates that intelligent orchestration and learning design can
+    unlock the latent potential of distributed academic infrastructure. The success of this initiative reflects the combined
+    efforts of the AI-EDGE team, including
+    <a href="https://kevinliu-osu.github.io/">Prof. Jia (Kevin) Liu</a>,
+    <a href="https://ziyueluocs.github.io/">Ziyue Luo</a>,
+    <a href="https://engineering.osu.edu/people/wu.5677">William Wu</a>,
+    Yinglun Xia, and many others.
+  </p>
+
+
+      
+
+      
+
+    </div>
+  </div>
+</main>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      
+<ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="mailto:nair.203@osu.edu" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/srijith1996" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://linkedin.com/in/srijithnair96" title="LinkedIn">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">LinkedIn</span>
+   </a>
+  </li><li class="list-inline-item">
+   <a href="https://orcid.org/0009-0006-3033-6615" title="ORCID">
+     <span class="fa-stack fa-lg" aria-hidden="true">
+       <i class="fas fa-circle fa-stack-2x"></i>
+       <i class="fab fa-orcid fa-stack-1x fa-inverse"></i>
+     </span>
+     <span class="sr-only">ORCID</span>
+   </a>
+ </li><li class="list-inline-item">
+    <a href="https://scholar.google.com/citations?user=MZhKftQAAAAJ" title="Google Scholar">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fa fa-graduation-cap fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Google Scholar</span>
+    </a>
+  </li></ul>
+
+
+      
+      <p class="copyright text-muted">
+      
+        Srijith Nair
+        &nbsp;&bull;&nbsp;
+      
+      2025
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="/">srijith1996.github.io</a>
+        </span>
+      
+
+      
+
+      
+
+      </p>
+      <p class="theme-by text-muted">
+        Powered by
+        <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>

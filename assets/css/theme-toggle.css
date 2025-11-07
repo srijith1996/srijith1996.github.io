@@ -1,0 +1,363 @@
+/* assets/css/toggle-theme.css */
+
+/* 🌞 Light theme */
+:root {
+  /* Base */
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+
+  /* Accent colors */
+  --primary-color: #005f73;    /* deep teal */
+  --secondary-color: #0a9396;  /* aqua */
+  --highlight-color: #94d2bd;  /* soft mint */
+  --danger-color: #ae2012;     /* red for alerts */
+
+  /* UI elements */
+  --header-bg: #f8f9fa;
+  --footer-bg: #e9ecef;
+  --card-bg: #ffffff;
+  --border-color: #dcdcdc;
+
+  /* Code blocks */
+  --code-bg: #f5f5f5;
+  --code-text: #c7254e;
+
+  --link-color: #005f73;     /* teal for links */
+  --link-hover: #107f83;
+
+  --color-nav-bg: #ffffff;
+  --color-nav-text: #222222;
+}
+
+/* 🌙 Dark theme */
+html[data-theme="dark"] {
+  /* Base */
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+
+  /* Accent colors */
+  --primary-color: #80ffdb;    /* bright teal */
+  --secondary-color: #64dfdf;  /* cyan */
+  --highlight-color: #48bfe3;  /* sky blue */
+  --danger-color: #ff6b6b;     /* softer red */
+
+  /* UI elements */
+  --header-bg: #1e1e1e;
+  --footer-bg: #1a1a1a;
+  --card-bg: #1c1c1c;
+  --border-color: #333333;
+
+  /* Code blocks */
+  --code-bg: #1a1a1a;
+  --code-text: #ffcb6b;
+
+  --link-color: #80ffdb;     /* bright teal for links */
+  --link-hover: #9dfff0;     /* cyan for hover */
+
+  --color-nav-bg: #1d1d1d;
+  --color-nav-text: #fafafa;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+p, span, small {
+  color: var(--text-color);
+}
+
+html[data-theme="dark"] p,
+html[data-theme="dark"] span,
+html[data-theme="dark"] small {
+  color: #cccccc; /* dimmer than main text but still readable */
+}
+
+
+header {
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+
+/* Adjustments for footer styles */
+footer {
+  background: var(--footer-bg);
+  border-top: 1px solid var(--border-color);
+}
+footer a {
+  color: var(--link-color);
+}
+footer a:hover{
+  color: var(--link-hover);
+}
+html[data-theme="dark"] .copyright {
+  color: var(--text-color) !important;
+}
+html[data-theme="dark"] .theme-by {
+  color: var(--text-color) !important;
+}
+
+/* ☀️ Light mode footer icons */
+footer .fa-stack .fa-circle {
+  color: #333; /* soft gray circle background */
+  transition: color 0.3s ease;
+}
+
+footer .fa-stack .fa-inverse {
+  color: #eee; /* inner icon contrast */
+  transition: color 0.3s ease;
+}
+
+/* 🎨 Platform-specific accent colors in light mode */
+footer a[href*="github.com"] .fa-circle {
+  color: #24292e;
+}
+footer a[href*="github.com"] .fa-inverse {
+  color: #fff;
+}
+
+footer a[href*="linkedin.com"] .fa-circle {
+  color: #0a66c2;
+}
+footer a[href*="linkedin.com"] .fa-inverse {
+  color: #fff;
+}
+
+footer a[href*="twitter.com"] .fa-circle {
+  color: #1da1f2;
+}
+footer a[href*="twitter.com"] .fa-inverse {
+  color: #fff;
+}
+
+footer a[href*="youtube.com"] .fa-circle {
+  color: #ff0000;
+}
+footer a[href*="youtube.com"] .fa-inverse {
+  color: #fff;
+}
+
+footer a[href*="scholar.google.com"] .fa-circle {
+  color: #4a86e8;
+}
+footer a[href*="scholar.google.com"] .fa-inverse {
+  color: #fff;
+}
+
+footer a[href*="orcid.org"] .fa-circle {
+  color: #a6ce39;
+}
+footer a[href*="orcid.org"] .fa-inverse {
+  color: #fff;
+}
+
+footer a[href*="feed.xml"] .fa-circle {
+  color: #f28c18;
+}
+footer a[href*="feed.xml"] .fa-inverse {
+  color: #fff;
+}
+
+/* ✨ Hover animation for all icons */
+footer a:hover .fa-stack .fa-circle {
+  color: #000; /* darkens background on hover */
+}
+
+footer a:hover .fa-stack .fa-inverse {
+  color: #fff; /* brighten inner icon */
+}
+
+
+/* 🌙 Dark mode footer icon adjustments */
+html[data-theme="dark"] footer .fa-stack .fa-circle {
+  color: #bbb; /* lighter background circle */
+  transition: color 0.3s ease;
+}
+
+html[data-theme="dark"] footer .fa-stack .fa-inverse {
+  color: #222; /* inner icon contrast */
+  transition: color 0.3s ease;
+}
+
+/* 🎨 Platform-specific accent colors in dark mode */
+html[data-theme="dark"] footer a[href*="github.com"] .fa-circle {
+  color: #333;
+}
+html[data-theme="dark"] footer a[href*="github.com"] .fa-inverse {
+  color: #fafafa;
+}
+
+html[data-theme="dark"] footer a[href*="linkedin.com"] .fa-circle {
+  color: #0077b5;
+}
+html[data-theme="dark"] footer a[href*="linkedin.com"] .fa-inverse {
+  color: #fff;
+}
+
+html[data-theme="dark"] footer a[href*="twitter.com"] .fa-circle {
+  color: #1da1f2;
+}
+html[data-theme="dark"] footer a[href*="twitter.com"] .fa-inverse {
+  color: #fff;
+}
+
+html[data-theme="dark"] footer a[href*="youtube.com"] .fa-circle {
+  color: #ff0000;
+}
+html[data-theme="dark"] footer a[href*="youtube.com"] .fa-inverse {
+  color: #fff;
+}
+
+html[data-theme="dark"] footer a[href*="scholar.google.com"] .fa-circle {
+  color: #4a86e8;
+}
+html[data-theme="dark"] footer a[href*="scholar.google.com"] .fa-inverse {
+  color: #fff;
+}
+
+html[data-theme="dark"] footer a[href*="orcid.org"] .fa-circle {
+  color: #a6ce39;
+}
+html[data-theme="dark"] footer a[href*="orcid.org"] .fa-inverse {
+  color: #fff;
+}
+
+html[data-theme="dark"] footer a[href*="feed.xml"] .fa-circle {
+  color: #f28c18;
+}
+html[data-theme="dark"] footer a[href*="feed.xml"] .fa-inverse {
+  color: #fff;
+}
+
+/* ✨ Hover animation for all icons */
+html[data-theme="dark"] footer a:hover .fa-stack .fa-circle {
+  color: #fff; /* brightens background on hover */
+}
+
+html[data-theme="dark"] footer a:hover .fa-stack .fa-inverse {
+  color: #000; /* invert for pop */
+}
+
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+code {
+  background: var(--code-bg);
+  color: var(--code-text);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* Default (light mode) */
+.navbar-custom {
+  background-color: var(--color-nav-bg); /* or a light neutral */
+  color: var(--color-nav-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Force navbar text color in dark mode */
+html[data-theme="dark"] .navbar-custom,
+html[data-theme="dark"] .navbar-custom a,
+html[data-theme="dark"] .site-nav a {
+  color: var(--color-nav-text) !important;
+}
+html[data-theme="dark"] .site-nav a:hover {
+  color: var(--link-hover) !important;
+}
+html[data-theme="dark"] .nav-link a {
+  color: var(--color-nav-text) !important;
+}
+html[data-theme="dark"] .nav-link a:hover {
+  color: var(--link-hover) !important;
+}
+html[data-theme="dark"] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-color: var(--card-bg);
+}
+
+
+/* Toggle button: The switch container */
+.switch {
+  position: relative;
+  display: inline-block;
+  top: 15px;
+  width: 45px;
+  height: 23px;
+}
+
+/* Hide default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider track */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: var(--border-color);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+/* Slider knob */
+.slider:before {
+  position: absolute;
+  content: "☀️";
+  height: 21px;
+  width: 21px;
+  left: 2px;
+  bottom: 1px;
+  background-color: var(--card-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: transform 0.2s, content 0.2s;
+}
+
+/* Dark mode active */
+input:checked + .slider {
+  background-color: var(--border-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(21px);
+  background-color: var(--card-bg);
+  content: "🌙";
+}
+
+/* Keep this h1 color constant across both themes */
+.fixed-light {
+  color: #ffffff !important; /* pick your preferred color */
+}
+
+/* Prevent dark mode from overriding it */
+html[data-theme="dark"] .fixed-light {
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] body {
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.05);
+}
