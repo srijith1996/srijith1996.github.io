@@ -26,7 +26,7 @@
   --link-hover: #107f83;
 
   --color-nav-bg: #ffffff;
-  --color-nav-text: #222;
+  --color-nav-text: #222222;
 }
 
 /* 🌙 Dark theme */
@@ -80,10 +80,166 @@ header {
   border-bottom: 1px solid var(--border-color);
 }
 
+
+/* Adjustments for footer styles */
 footer {
   background: var(--footer-bg);
   border-top: 1px solid var(--border-color);
 }
+footer a {
+  color: var(--link-color);
+}
+footer a:hover{
+  color: var(--link-hover);
+}
+html[data-theme="dark"] .copyright {
+  color: var(--text-color) !important;
+}
+html[data-theme="dark"] .theme-by {
+  color: var(--text-color) !important;
+}
+
+/* ☀️ Light mode footer icons */
+footer .fa-stack .fa-circle {
+  color: #333; /* soft gray circle background */
+  transition: color 0.3s ease;
+}
+
+footer .fa-stack .fa-inverse {
+  color: #eee; /* inner icon contrast */
+  transition: color 0.3s ease;
+}
+
+/* 🎨 Platform-specific accent colors in light mode */
+footer a[href*="github.com"] .fa-circle {
+  color: #24292e;
+}
+footer a[href*="github.com"] .fa-inverse {
+  color: #fff;
+}
+
+footer a[href*="linkedin.com"] .fa-circle {
+  color: #0a66c2;
+}
+footer a[href*="linkedin.com"] .fa-inverse {
+  color: #fff;
+}
+
+footer a[href*="twitter.com"] .fa-circle {
+  color: #1da1f2;
+}
+footer a[href*="twitter.com"] .fa-inverse {
+  color: #fff;
+}
+
+footer a[href*="youtube.com"] .fa-circle {
+  color: #ff0000;
+}
+footer a[href*="youtube.com"] .fa-inverse {
+  color: #fff;
+}
+
+footer a[href*="scholar.google.com"] .fa-circle {
+  color: #4a86e8;
+}
+footer a[href*="scholar.google.com"] .fa-inverse {
+  color: #fff;
+}
+
+footer a[href*="orcid.org"] .fa-circle {
+  color: #a6ce39;
+}
+footer a[href*="orcid.org"] .fa-inverse {
+  color: #fff;
+}
+
+footer a[href*="feed.xml"] .fa-circle {
+  color: #f28c18;
+}
+footer a[href*="feed.xml"] .fa-inverse {
+  color: #fff;
+}
+
+/* ✨ Hover animation for all icons */
+footer a:hover .fa-stack .fa-circle {
+  color: #000; /* darkens background on hover */
+}
+
+footer a:hover .fa-stack .fa-inverse {
+  color: #fff; /* brighten inner icon */
+}
+
+
+/* 🌙 Dark mode footer icon adjustments */
+html[data-theme="dark"] footer .fa-stack .fa-circle {
+  color: #bbb; /* lighter background circle */
+  transition: color 0.3s ease;
+}
+
+html[data-theme="dark"] footer .fa-stack .fa-inverse {
+  color: #222; /* inner icon contrast */
+  transition: color 0.3s ease;
+}
+
+/* 🎨 Platform-specific accent colors in dark mode */
+html[data-theme="dark"] footer a[href*="github.com"] .fa-circle {
+  color: #333;
+}
+html[data-theme="dark"] footer a[href*="github.com"] .fa-inverse {
+  color: #fafafa;
+}
+
+html[data-theme="dark"] footer a[href*="linkedin.com"] .fa-circle {
+  color: #0077b5;
+}
+html[data-theme="dark"] footer a[href*="linkedin.com"] .fa-inverse {
+  color: #fff;
+}
+
+html[data-theme="dark"] footer a[href*="twitter.com"] .fa-circle {
+  color: #1da1f2;
+}
+html[data-theme="dark"] footer a[href*="twitter.com"] .fa-inverse {
+  color: #fff;
+}
+
+html[data-theme="dark"] footer a[href*="youtube.com"] .fa-circle {
+  color: #ff0000;
+}
+html[data-theme="dark"] footer a[href*="youtube.com"] .fa-inverse {
+  color: #fff;
+}
+
+html[data-theme="dark"] footer a[href*="scholar.google.com"] .fa-circle {
+  color: #4a86e8;
+}
+html[data-theme="dark"] footer a[href*="scholar.google.com"] .fa-inverse {
+  color: #fff;
+}
+
+html[data-theme="dark"] footer a[href*="orcid.org"] .fa-circle {
+  color: #a6ce39;
+}
+html[data-theme="dark"] footer a[href*="orcid.org"] .fa-inverse {
+  color: #fff;
+}
+
+html[data-theme="dark"] footer a[href*="feed.xml"] .fa-circle {
+  color: #f28c18;
+}
+html[data-theme="dark"] footer a[href*="feed.xml"] .fa-inverse {
+  color: #fff;
+}
+
+/* ✨ Hover animation for all icons */
+html[data-theme="dark"] footer a:hover .fa-stack .fa-circle {
+  color: #fff; /* brightens background on hover */
+}
+
+html[data-theme="dark"] footer a:hover .fa-stack .fa-inverse {
+  color: #000; /* invert for pop */
+}
+
 
 .card {
   background: var(--card-bg);
@@ -121,18 +277,20 @@ a:hover {
 html[data-theme="dark"] .navbar-custom,
 html[data-theme="dark"] .navbar-custom a,
 html[data-theme="dark"] .site-nav a {
-  color: var(--color-nav-text);
-}
-html[data-theme="dark"] .nav-link a {
-  color: var(--color-nav-text);
-}
-
-html[data-theme="dark"] .navbar-custom a:hover,
-html[data-theme="dark"] .nav-link a:hover {
-  color: var(--link-hover);
+  color: var(--color-nav-text) !important;
 }
 html[data-theme="dark"] .site-nav a:hover {
-  color: var(--link-hover);
+  color: var(--link-hover) !important;
+}
+html[data-theme="dark"] .nav-link a {
+  color: var(--color-nav-text) !important;
+}
+html[data-theme="dark"] .nav-link a:hover {
+  color: var(--link-hover) !important;
+}
+html[data-theme="dark"] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-color: var(--card-bg);
 }
 
 
@@ -140,9 +298,9 @@ html[data-theme="dark"] .site-nav a:hover {
 .switch {
   position: relative;
   display: inline-block;
-  top: 10px;
-  width: 50px;
-  height: 26px;
+  top: 15px;
+  width: 45px;
+  height: 23px;
 }
 
 /* Hide default checkbox */
@@ -166,26 +324,27 @@ html[data-theme="dark"] .site-nav a:hover {
 .slider:before {
   position: absolute;
   content: "☀️";
-  height: 22px;
-  width: 22px;
+  height: 21px;
+  width: 21px;
   left: 2px;
-  bottom: 2px;
+  bottom: 1px;
   background-color: var(--card-bg);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 14px;
-  transition: transform 0.4s, content 0.4s;
+  transition: transform 0.2s, content 0.2s;
 }
 
 /* Dark mode active */
 input:checked + .slider {
-  background-color: var(--primary-color);
+  background-color: var(--border-color);
 }
 
 input:checked + .slider:before {
-  transform: translateX(24px);
+  transform: translateX(21px);
+  background-color: var(--card-bg);
   content: "🌙";
 }
 

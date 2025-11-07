@@ -1,6 +1,16 @@
-# Beautiful Jekyll
+## Srijith Nair's github.io website
 
 [![Gem Version](https://badge.fury.io/rb/beautiful-jekyll-theme.svg)](https://badge.fury.io/rb/beautiful-jekyll-theme)
+
+Welcome to the source code for my website.  I have mainly used the source code
+by [Dean Attali](https://deanattali.com) for Beautiful Jekyll.
+I have added several features of my own that include:
+ - A project page with a tiled layout displaying my projects.
+ - A publication section powered by Jekyll Scholar.
+ - A scrollable "latest news" section.
+ - A dark/night mode toggle for better accessibility.
+
+What follows is the original README from Dean Attali's repository. 
 
 > By [Dean Attali](https://deanattali.com) &middot; [Demo](https://beautifuljekyll.com/)
 
@@ -11,16 +21,27 @@
 ## Table of contents
 
 - [Features](#features)
-- [Sponsors 🏆](#sponsors)
-- [**Build your website in 3 steps**](#build-your-website-in-3-steps)
+- [Build your website in 3 steps](#build-your-website-in-3-steps)
+  - [The easy way (recommended!)](#the-easy-way-recommended)
+    - [1. Fork this project](#1-fork-this-project)
+    - [2. Rename the repository to `YOURUSERNAME.github.io`](#2-rename-the-repository-to-yourusernamegithubio)
+    - [3. Customize your website settings](#3-customize-your-website-settings)
+    - [4. Congratulations! You have a website!](#4-congratulations-you-have-a-website)
+  - [The harder way (for advanced users)](#the-harder-way-for-advanced-users)
 - [Plans](#plans)
 - [Add your own content](#add-your-own-content)
 - [Customizing parameters for each page](#customizing-parameters-for-each-page)
 - [Supported parameters](#supported-parameters)
+  - [Main parameters](#main-parameters)
+  - [Parameters for SEO and social media sharing](#parameters-for-seo-and-social-media-sharing)
+  - [Less commonly used parameters](#less-commonly-used-parameters)
+  - [Advanced parameters](#advanced-parameters)
+  - [Page types](#page-types)
 - [Featured users (success stories!)](#featured-users-success-stories)
 - [Next steps](#next-steps)
 - [Getting help](#getting-help)
-- [Credits and contributions](#contributions)
+- [Contributions](#contributions)
+- [Credits](#credits)
 
 # Features
 
