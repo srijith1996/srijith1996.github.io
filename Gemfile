@@ -24,7 +24,6 @@ gem "jekyll-sitemap"
 #gem "logger", group: :jekyll_plugins
 #, "~> 1.7"
 
-gem "jekyll-theme-minimal", group: :jekyll_plugins
 #gem 'github-pages', group: :jekyll_plugins
 
 gem "jekyll-scholar", "~> 7.2.1", group: :jekyll_plugins

@@ -3,7 +3,7 @@
   padding: 1em;
   background: var(--background-secondary);   /* adapts to theme */
   border-radius: 8px;
-  max-height: 200px;
+  max-height: 300px;
   overflow-y: auto;
   color: var(--text-primary);               /* adapts to theme */
 }
@@ -20,7 +20,7 @@
 #latest-news li {
   display: grid;
   grid-template-columns: 150px 1fr;
-  gap: 1em;
+  gap: 0.1em;
   margin: 0.3em 0;
   align-items: start;
   white-space: nowrap;

@@ -10,7 +10,6 @@
 ############################
 
 # Name of website
-theme: jekyll-theme-minimal
 title: Srijith Nair
 description: PhD Candidate, NSF AI-EDGE Institute, The Ohio State University
 
@@ -297,6 +296,12 @@ defaults:
       path: "" # any file that's not a post will be a "page" layout by default
     values:
       layout: "page"
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "research"
 
 scholar:
   style: apa

@@ -1,11 +1,12 @@
 ---
 title: "Publications"
+layout: research
 ---
 
-### Conferences and Journals
+### Conferences, Journals and Workshops
 {% bibliography --file references %}
 
-### Preprints
+### Preprints and Manuscripts
 {% bibliography --file preprint %}
 
 ### Manuscripts

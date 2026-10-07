@@ -1,45 +1,21 @@
 ---
-layout: page
-title: Hi, I am Srijith
-share-title: Srijith Nair
-subtitle: PhD Candidate | Distributed Learning | Continual Learning | In-context Learning | Avid Nature Lover
-cover-img: /assets/img/mathy_bg_wider.png
+layout: research
+title: Machine learning research
+home: true
 ---
-
-<!--  Passionate about Applied Math & Coding | Avid Nature Lover -->
-<h2>About Me</h2>
-<p align="justify">
-I am a PhD candidate at The Ohio State University under the guidance of
-<a href="https://kevinliu-osu.github.io/">Prof. Jia (Kevin) Liu</a>.
-I am very passionate about research in the field of Deep Learning, particularly
-efficient Distributed Deep Learning, from theoretical first principles to its
-applications in Natural Language Processing and Image Processing.
-My current research interests are in the broad areas of Federated Learning,
-Continual Learning and Multi-objective Prompt Optimization.
-In the initial years of my MS/PhD at OSU, I worked with <a
-href="https://ece.osu.edu/people/schniter.1">Prof. Philip Schniter</a> in 
-Deep Regularization methods for Image Processing, Approximate Message
-Passing algorithms for image inverse applications.
-Prior to doing my PhD, I worked at the Indian Institute of Science (IISc)
-Bangalore, with
-<a href="https://cds.iisc.ac.in/faculty/simmhan/">Prof. Yogesh Simmhan</a>,
-<a href="https://ieeexplore.ieee.org/author/37409940600">Dr. Malati Hegde</a>,
-and <a href="https://ieeexplore.ieee.org/author/37085441271">Mr. SVR Anand</a>.
-There, I worked on development and real-world deployment of wireless sensor
-networks for air pollution monitoring under the SATVAM project.
-In my spare time, I love playing racquet sports, hiking, singing, playing the
-guitar, and reading books.
-</p>
-
-<br/>
-<h3>Latest News</h3>
-<section id="latest-news">
-    {% for item in site.data.news %}
-        <li>
-            <span class="news-date">{{ item.date | date: "%b %d, %Y" }}</span>
-            <span class="news-text">{{ item.text }}</span>
-        </li>
-    {% endfor %}
-</section>
-
-<link rel="stylesheet" href="{{ '/assets/css/latest-news.css' | relative_url }}">
+<section id="about" class="about-body" aria-labelledby="background-title"><p class="eyebrow">Background</p><h1 id="background-title">About</h1>
+<p>I am a PhD candidate at The Ohio State University and the NSF AI-EDGE Institute, advised by <a href="https://kevinliu-osu.github.io/">Prof. Jia (Kevin) Liu</a>. I work on <strong>federated learning</strong>, <strong>continual learning</strong>, and <strong>multi-objective optimization</strong>. My research connects theoretical guarantees with practical systems: how can we learn efficiently across resource-constrained devices, and retain knowledge as tasks change?</p>
+<p>In federated learning, I developed <a href="https://openreview.net/forum?id=HnwcrtoDd4">FSL-SAGE (ICML 2025)</a>, combining convergence analysis with implementations on geo-distributed GPU systems. My work on <a href="https://arxiv.org/abs/2605.19145">PMF-CL</a> studies memory-efficient continual learning through Pareto-optimal solutions for conflicting tasks. I also study the theoretical foundations of <strong>in-context learning in transformers</strong>.</p>
+<p>During my 2026 research internship at Emergence AI, I worked on <strong>verifiable code generation</strong>, developing Lean 4 evaluation metrics to assess whether generated formal specifications capture the intended behavior. This work led to <a href="https://openreview.net/forum?id=445UmzSXe6">Beyond Type-checking</a>, accepted at the NeurIPS 2026 Workshop on AI for Verifiable Coding, and an accompanying <a href="https://www.emergence.ai/blog/ss8awztldy2qh3lcs19jxndobobkb1">technical blog post</a>.</p>
+<p>Previously, I worked with <a href="https://ece.osu.edu/people/schniter.1">Prof. Philip Schniter</a> at OSU on <strong>image inverse problems</strong>, robust denoising, learned regularization, and approximate message passing. Before joining OSU, I worked at the Indian Institute of Science with <a href="https://cds.iisc.ac.in/faculty/simmhan/">Prof. Yogesh Simmhan</a>, Dr. Malati Hegde, and Mr. SVR Anand, developing and deploying low-cost wireless sensor networks for air-quality monitoring.</p><p class="personal-note">Outside research, I enjoy racquet sports, hiking, singing, playing guitar, and reading.</p></section>
+<aside id="news" class="news-panel" aria-labelledby="news-title"><div class="news-heading"><h2 id="news-title">News &amp; updates</h2><span class="small-label">Latest</span></div><div class="news-scroll" tabindex="0" role="region" aria-label="News updates, scroll for older entries"><ul>{% for item in site.data.news %}{% if item.date and item.text %}<li><time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %Y' }}</time><p>{{ item.text }}</p></li>{% endif %}{% endfor %}</ul></div><p class="news-hint">Scroll for earlier updates ↓</p></aside>
+<section id="research" class="section-block"><div class="section-heading"><div><p class="eyebrow">Research</p><h2>Research</h2></div><a href="{{ '/projects/' | relative_url }}">Explore projects ↗</a></div><div class="research-grid">
+<article><span class="research-number">01 /</span><h3>Federated learning</h3><p>Efficient federated and split learning, from convergence analysis to geo-distributed implementations for large language models.</p><a href="{{ '/projects/' | relative_url }}">Related projects ↗</a></article>
+<article><span class="research-number">02 /</span><h3>Continual learning</h3><p>Principled learning across sequential tasks, with memory-efficient algorithms that minimize forgetting.</p><a href="https://arxiv.org/abs/2605.19145">PMF-CL paper ↗</a></article>
+<article><span class="research-number">03 /</span><h3>Multi-objective optimization</h3><p>Pareto-optimal solutions for conflicting tasks, connecting optimization theory with continual learning.</p><a href="https://arxiv.org/abs/2605.19145">Related research ↗</a></article></div></section>
+<section id="publications" class="section-block"><div class="section-heading"><div><p class="eyebrow">Publications</p><h2>Publications</h2></div><a class="icon-link" href="https://scholar.google.com/citations?user=MZhKftQAAAAJ" aria-label="Google Scholar" title="Google Scholar"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="{{ '/assets/img/profile-icons.svg' | relative_url }}#scholar"></use></svg></a></div>
+<h3 class="publication-category">Conferences, journals &amp; workshops</h3>{% bibliography --file references %}
+<h3 class="publication-category">Preprints &amp; manuscripts</h3>{% bibliography --file preprint %}
+<h3 class="publication-category">Thesis</h3>{% bibliography --file thesis %}
+<details class="additional-publications"><summary>Other writing &amp; educational resources</summary>{% bibliography --file misc %}</details></section>
+<section id="cv" class="contact-section"><div><p class="eyebrow">CV &amp; contact</p><h2>CV &amp; contact</h2><p>For research opportunities and collaborations, get in touch.</p><a class="contact-email" href="mailto:nair.203@osu.edu">nair.203@osu.edu ↗</a></div><div class="contact-links"><a class="icon-link" href="{{ '/assets/pdfs/cv.pdf' | relative_url }}" aria-label="Curriculum vitae (PDF)" title="Curriculum vitae (PDF)"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="{{ '/assets/img/profile-icons.svg' | relative_url }}#cv"></use></svg></a><a class="icon-link" href="https://github.com/srijith1996" aria-label="GitHub" title="GitHub"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="{{ '/assets/img/profile-icons.svg' | relative_url }}#github"></use></svg></a><a class="icon-link" href="https://www.linkedin.com/in/srijithnair96/" aria-label="LinkedIn" title="LinkedIn"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="{{ '/assets/img/profile-icons.svg' | relative_url }}#linkedin"></use></svg></a><a href="https://orcid.org/0009-0006-3033-6615">ORCID ↗</a></div></section>

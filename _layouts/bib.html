@@ -1,27 +1,8 @@
 ---
 ---
-<div class="text-justify">
-    {{reference}}
-</div>
-
-{% if entry.note %}
-<div>
-    <em>{{ entry.note }}</em>
-</div>
-{% endif %}
-
-<div>
-    {% if entry.doi %}
-    <span><a href="{{ entry.doi | prepend: 'http://doi.org/' }}">doi</a></span>
-    {% endif %}
-    {% if entry.hal_id %}
-    <span><a href="{{ entry.hal_id | prepend: 'http://hal.inria.fr/' }}">hal</a></span>
-    {% endif %}
-</div>
-<div>
-    {% if entry.pdf %}
-    <span><a href="{{ entry.pdf }}">pdf</a></span>
-    {% endif %}
-</div>
-
-<!-- <div><pre>{{ entry.bibtex }}</pre></div> -->
+<article class="publication"><div class="publication-year">{{ entry.year }}</div><div class="publication-body">
+<h4>{{ entry.title }}</h4>
+<p class="publication-authors">{% for author in entry.author_array %}{% unless forloop.first %}, {% endunless %}{% if author.last == 'Nair' %}<strong>{% endif %}{{ author.first }} {{ author.last }}{% if author.last == 'Nair' %}</strong>{% endif %}{% endfor %}</p>
+<p class="publication-venue">{% if entry.booktitle %}{{ entry.booktitle }}{% elsif entry.journal %}{{ entry.journal }}{% elsif entry.school %}{{ entry.type }} · {{ entry.school }}{% elsif entry.archivePrefix %}{{ entry.archivePrefix }} preprint{% endif %}{% if entry.note %} · {{ entry.note }}{% endif %}</p>
+{% assign resources = site.data.publication_links[entry.key] %}
+<div class="publication-links">{% if entry.url %}<a href="{{ entry.url }}">Paper ↗</a>{% endif %}{% if resources.blog %}<a href="{{ resources.blog }}">Blog post ↗</a>{% endif %}{% if entry.pdf %}<a href="{{ entry.pdf }}">PDF ↗</a>{% endif %}{% if entry.doi %}<a href="https://doi.org/{{ entry.doi }}">DOI ↗</a>{% endif %}{% if entry.hal_id %}<a href="https://hal.inria.fr/{{ entry.hal_id }}">HAL ↗</a>{% endif %}<details><summary>BibTeX</summary><pre>{{ entry.bibtex | escape }}</pre></details></div></div></article>
