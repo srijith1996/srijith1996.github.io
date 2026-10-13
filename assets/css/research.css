@@ -11,3 +11,6 @@
 
 .publication-venue{font-size:14px}
 
+
+/* Labeled document buttons share the profile resource styling. */
+.document-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:6px 10px;min-height:32px;border:1px solid var(--line);border-radius:4px;font:12px/1.5 var(--sans);color:var(--accent)}.document-link:hover{background:#eaeef1;text-decoration:none}.document-link svg{display:block;flex-shrink:0;width:18px;height:18px}.document-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
