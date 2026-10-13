@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Srijith Nair</title>
+<meta name="description" content="A routing protocol for network state monitoring in low-power constrained networks">
+<link rel="icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/research.css">
+<script defer src="/assets/js/research.js"></script>
+</head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="header-inner">
+<a class="profile-photo" href="/"><img src="/assets/img/professional-photo.jpg" alt="Srijith Nair" width="112" height="112"></a>
+<a class="wordmark" href="/">Srijith Nair</a>
+<p class="profile-role">PhD candidate<br>The Ohio State University</p>
+<p class="profile-affiliation">NSF AI-EDGE Institute</p>
+<div class="profile-links"><a class="icon-link" href="https://scholar.google.com/citations?user=MZhKftQAAAAJ" aria-label="Google Scholar" title="Google Scholar"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="/assets/img/profile-icons.svg#scholar"></use></svg></a><a class="icon-link" href="https://github.com/srijith1996" aria-label="GitHub" title="GitHub"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="/assets/img/profile-icons.svg#github"></use></svg></a><a class="icon-link" href="https://www.linkedin.com/in/srijithnair96/" aria-label="LinkedIn" title="LinkedIn"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="/assets/img/profile-icons.svg#linkedin"></use></svg></a><a class="icon-link" href="/assets/pdfs/cv.pdf" aria-label="Curriculum vitae (PDF)" title="Curriculum vitae (PDF)"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="/assets/img/profile-icons.svg#cv"></use></svg></a><a class="document-link" href="/assets/pdfs/resume.pdf" title="Résumé (PDF)"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="/assets/img/profile-icons.svg#resume"></use></svg><span>Résumé (PDF)</span></a></div>
+<nav aria-label="Main navigation">
+<a href="/#about">About</a><a href="/#news">News</a><a href="/#research">Research</a><a href="/#publications">Publications</a><a href="/projects/" >Projects</a><a href="/#cv">CV &amp; contact</a>
+</nav><div class="sidebar-contact"><a href="mailto:nair.203@osu.edu">nair.203@osu.edu</a></div></div></header>
+<main id="main" class="site-main"><div class="page-heading"><p class="eyebrow">Research portfolio</p><h1>CONETSI</h1><p class="lead">A routing protocol for network state monitoring in low-power constrained networks</p></div><div class="project-detail"><h3 id="on-demand-distributed-network-state-information-collection">On-Demand Distributed Network State Information Collection</h3>
+
+<p><strong>Published in IEEE COMSNETS 2020:</strong>
+<a href="https://ieeexplore.ieee.org/document/9027403" target="_blank"><img src="https://img.shields.io/badge/IEEEXplore-paper-blue" alt="Static Badge" /></a>
+<a href="https://github.com/srijith1996/conetsi" target="_blank"><img src="https://img.shields.io/badge/GitHub-source-black" alt="Static Badge" /></a></p>
+
+<p style="text-align: justify;">
+As the Internet of Things (IoT) continues to scale into industrial and smart-city environments, maintaining the health and performance of vast sensor networks becomes increasingly complex. Traditional monitoring approaches like centralized polling or static telemetry are often too bandwidth- and power-intensive for resource-constrained networks. The CONETSI project tackles this challenge by proposing a distributed and opportunistic mechanism for collecting Network State Information (NSI) — vital data such as link quality, queue length, and battery status — while minimizing communication overhead and ensuring fairness among network nodes.
+</p>
+
+<p style="text-align: justify;">
+At the core of CONETSI lies an algorithm that allows nodes to self-organize into temporary chains for NSI aggregation. Rather than transmitting information individually, nodes advertise their data demands and join nearby nodes with similar urgency, forming an adaptive sequence that serially piggybacks state information toward a monitoring station. This process operates independently of existing routing protocols and can dynamically adapt to changing network conditions. Implemented within the Contiki-NG operating system for 6LoWPAN/RPL networks, the system ensures efficient bandwidth usage, balances energy consumption, and maintains equitable data collection opportunities across the network.
+</p>
+
+<p style="text-align: justify;">
+Through theoretical analysis and simulation experiments, CONETSI demonstrates significant gains in channel utilization and energy efficiency compared to traditional methods. The results highlight how decentralized decision-making and local exploration can replace costly centralized control in large-scale IoT systems. By achieving scalable, low-overhead monitoring, CONETSI paves the way for sustainable management of dense sensor deployments in next-generation connected environments.
+</p>
+</div></main>
+<footer class="site-footer"><span>Srijith Nair · The Ohio State University</span><a href="mailto:nair.203@osu.edu">Get in touch ↗</a></footer>
+</body></html>

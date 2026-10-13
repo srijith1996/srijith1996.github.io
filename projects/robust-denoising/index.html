@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Srijith Nair</title>
+<meta name="description" content="Robust blind-image denoising using instance normalization">
+<link rel="icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/research.css">
+<script defer src="/assets/js/research.js"></script>
+</head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="header-inner">
+<a class="profile-photo" href="/"><img src="/assets/img/professional-photo.jpg" alt="Srijith Nair" width="112" height="112"></a>
+<a class="wordmark" href="/">Srijith Nair</a>
+<p class="profile-role">PhD candidate<br>The Ohio State University</p>
+<p class="profile-affiliation">NSF AI-EDGE Institute</p>
+<div class="profile-links"><a class="icon-link" href="https://scholar.google.com/citations?user=MZhKftQAAAAJ" aria-label="Google Scholar" title="Google Scholar"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="/assets/img/profile-icons.svg#scholar"></use></svg></a><a class="icon-link" href="https://github.com/srijith1996" aria-label="GitHub" title="GitHub"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="/assets/img/profile-icons.svg#github"></use></svg></a><a class="icon-link" href="https://www.linkedin.com/in/srijithnair96/" aria-label="LinkedIn" title="LinkedIn"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="/assets/img/profile-icons.svg#linkedin"></use></svg></a><a class="icon-link" href="/assets/pdfs/cv.pdf" aria-label="Curriculum vitae (PDF)" title="Curriculum vitae (PDF)"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="/assets/img/profile-icons.svg#cv"></use></svg></a><a class="document-link" href="/assets/pdfs/resume.pdf" title="Résumé (PDF)"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="/assets/img/profile-icons.svg#resume"></use></svg><span>Résumé (PDF)</span></a></div>
+<nav aria-label="Main navigation">
+<a href="/#about">About</a><a href="/#news">News</a><a href="/#research">Research</a><a href="/#publications">Publications</a><a href="/projects/" >Projects</a><a href="/#cv">CV &amp; contact</a>
+</nav><div class="sidebar-contact"><a href="mailto:nair.203@osu.edu">nair.203@osu.edu</a></div></div></header>
+<main id="main" class="site-main"><div class="page-heading"><p class="eyebrow">Research portfolio</p><h1>Robust image denoising</h1><p class="lead">Robust blind-image denoising using instance normalization</p></div><div class="project-detail"><h3 id="robust-blind-image-denoising-via-instance-normalization">Robust Blind Image Denoising via Instance Normalization</h3>
+
+<p><strong>Published as MS Thesis:</strong>
+<a href="https://etd.ohiolink.edu/acprod/odb_etd/r/etd/search/10?p10_accession_num=osu1714849501121502&amp;clear=10&amp;session=128907745351327" target="_blank"><img src="https://img.shields.io/badge/OSU-Thesis-red" alt="Static Badge" /></a></p>
+
+<center><img src="/assets/my_img/projects/robust_den/result.png" /></center>
+<center>Our instance normalization method (In-DnCNN) outperforms other state-of-the-art in terms of robustness</center>
+
+<p style="text-align: justify;">
+Image denoisers are a widely applicable tool in many image inverse problems like
+compressive sensing, deblurring, in-painting, super-resolution, etc. Various
+algorithmic approaches for denoising have been studied in the past decades.
+However, data-driven denoising methods, which learn to denoise images from large
+image datasets using deep neural networks, have demonstrated far superior
+performance compared to the classical algorithmic methods while having much
+faster inference times. While non-blind methods require knowledge of the noise
+level contained within the image, blind methods which require no such
+information are more practical. However, the performance of many recent
+state-of-the-art blind denoisers depend heavily on the noise levels used during
+training. In more recent work, ideas of inducing scale and normalization
+equivariance properties in denoisers have been explored in order to make
+denoisers more robust to changes in noise levels from training to test data.
+</p>
+
+<p style="text-align: justify;">
+In our work we extend upon this idea, where we introduce a method to make any
+given denoiser normalization equivariant using a simple idea of instance
+normalization, which improves the noise level robustness of the denoiser by a
+significantly large margin with minimal change to the underlying architecture.
+In this thesis, we theoretically formulate our idea from the perspective of
+minimizers of the Wasserstein-1 distance between empirical distributions of
+training and test data, and propose a more practically feasible 2-pixel
+approximation that yields a quantile-based instance normalization method which
+makes our proposed normalization more robust to outlier pixels in images. Our
+instance normalization method can be implemented as a straightforward extension
+of any denoising architecture, thus leveraging the inherent qualities of the
+underlying denoiser, without compromising on robustness and qualitative
+performance.
+</p>
+</div></main>
+<footer class="site-footer"><span>Srijith Nair · The Ohio State University</span><a href="mailto:nair.203@osu.edu">Get in touch ↗</a></footer>
+</body></html>

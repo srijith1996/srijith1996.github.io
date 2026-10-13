@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Srijith Nair</title>
+<meta name="description" content="Implementing Federated Split Learning over a geo-distributed setup.">
+<link rel="icon" href="/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/research.css">
+<script defer src="/assets/js/research.js"></script>
+</head><body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="header-inner">
+<a class="profile-photo" href="/"><img src="/assets/img/professional-photo.jpg" alt="Srijith Nair" width="112" height="112"></a>
+<a class="wordmark" href="/">Srijith Nair</a>
+<p class="profile-role">PhD candidate<br>The Ohio State University</p>
+<p class="profile-affiliation">NSF AI-EDGE Institute</p>
+<div class="profile-links"><a class="icon-link" href="https://scholar.google.com/citations?user=MZhKftQAAAAJ" aria-label="Google Scholar" title="Google Scholar"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="/assets/img/profile-icons.svg#scholar"></use></svg></a><a class="icon-link" href="https://github.com/srijith1996" aria-label="GitHub" title="GitHub"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="/assets/img/profile-icons.svg#github"></use></svg></a><a class="icon-link" href="https://www.linkedin.com/in/srijithnair96/" aria-label="LinkedIn" title="LinkedIn"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="/assets/img/profile-icons.svg#linkedin"></use></svg></a><a class="icon-link" href="/assets/pdfs/cv.pdf" aria-label="Curriculum vitae (PDF)" title="Curriculum vitae (PDF)"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="/assets/img/profile-icons.svg#cv"></use></svg></a><a class="document-link" href="/assets/pdfs/resume.pdf" title="Résumé (PDF)"><svg aria-hidden="true" focusable="false" width="18" height="18"><use href="/assets/img/profile-icons.svg#resume"></use></svg><span>Résumé (PDF)</span></a></div>
+<nav aria-label="Main navigation">
+<a href="/#about">About</a><a href="/#news">News</a><a href="/#research">Research</a><a href="/#publications">Publications</a><a href="/projects/" >Projects</a><a href="/#cv">CV &amp; contact</a>
+</nav><div class="sidebar-contact"><a href="mailto:nair.203@osu.edu">nair.203@osu.edu</a></div></div></header>
+<main id="main" class="site-main"><div class="page-heading"><p class="eyebrow">Research portfolio</p><h1>Geo-distributed Split Learning</h1><p class="lead">Implementing Federated Split Learning over a geo-distributed setup.</p></div><div class="project-detail"><h3>Implementing Split Learning (SL), Federated SL and FSL-SAGE in a geo-distributed cross-institute test-bed</h3>
+
+<strong><a href="https://aiedge.osu.edu/end-end-problems">NSF AI-EDGE institute: Problem 3</a></strong>
+<br>
+
+<center><img src="/assets/my_img/projects/fsl_sage/dashboard.png"></center>
+<center>Snapshot of a real-time dashboard monitoring a cross institution FSL-SAGE deployment</center>
+
+  <p style="text-align: justify;">
+    Training today’s large language models (LLMs), often comprising hundreds of billions or even trillions of parameters,
+    demands massive computational and data resources—typically accessible only to hyperscale data centers.
+    However, vast pools of heterogeneous and lower-end GPUs already exist across academic and industrial institutions.
+    Harnessing these distributed resources could democratize large-scale model training, but doing so requires orchestrating
+    computation, communication, and data management across geographically separated sites.
+    The AI-EDGE End-to-End Problem 3 tackles this challenge:
+    <strong>how can we collaboratively train and fine-tune LLMs across a federation of edge networks?</strong>
+  </p>
+
+  <p style="text-align: justify;">
+    Our approach builds on the principles of <strong>Federated Learning</strong> and <strong>Split Learning</strong>,
+    combining their strengths into a scalable system that supports distributed pre-training and fine-tuning of LLMs across
+    multiple institutions. While existing FL frameworks focus on full-model training, our
+    <strong>federated split learning (FSL)</strong> system partitions the model between clients and servers—reducing
+    client memory requirements while enabling collaborative gradient-based updates.
+    We implement this through <strong><a href="/projects/fsl/">FSL-SAGE</a></strong> (Federated Split Learning via Smashed Activation Gradient Estimation),
+    a method that estimates server gradients locally to allow asynchronous and communication-efficient training without
+    sacrificing accuracy. The current test-bed spans The Ohio State University, University of Texas at Austin,
+    University of Michigan, and IIT Bombay, each contributing compute and data resources over a geo-distributed network.
+  </p>
+
+  <p style="text-align: justify;">
+    This project represents a major step toward <strong>decentralized foundation model training</strong>—leveraging existing
+    edge hardware for scalable and privacy-preserving AI development. Our framework not only provides an open, extensible
+    platform for collaborative LLM training but also demonstrates that intelligent orchestration and learning design can
+    unlock the latent potential of distributed academic infrastructure. The success of this initiative reflects the combined
+    efforts of the AI-EDGE team, including
+    <a href="https://kevinliu-osu.github.io/">Prof. Jia (Kevin) Liu</a>,
+    <a href="https://ziyueluocs.github.io/">Ziyue Luo</a>,
+    <a href="https://engineering.osu.edu/people/wu.5677">William Wu</a>,
+    Yinglun Xia, and many others.
+  </p>
+</div></main>
+<footer class="site-footer"><span>Srijith Nair · The Ohio State University</span><a href="mailto:nair.203@osu.edu">Get in touch ↗</a></footer>
+</body></html>
